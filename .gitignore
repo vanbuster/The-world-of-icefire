@@ -1,0 +1,5 @@
+.env
+output/
+*.pyc
+__pycache__/
+.wechat_token.json
