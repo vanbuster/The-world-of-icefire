@@ -1,0 +1,243 @@
+@import "tailwindcss";
+
+:root {
+  --background: #15110d;
+  --foreground: #f2dfb2;
+  --parchment: #d8bd82;
+  --parchment-deep: #9d7645;
+  --aged-paper: #6d4a2b;
+  --ink: #20160f;
+  --faded-ink: #6d5a42;
+  --dark-gold: #a67c35;
+  --burnished-gold: #d4a84d;
+  --winter-blue: #8da8b8;
+  --snow-mist: #e8f0ee;
+  --fog: #c5c2ae;
+  --war-smoke: #40372d;
+  --blood-rust: #743326;
+  --forest-deep: #263d2f;
+  --sea-muted: #3d6267;
+  --panel: #2a2117;
+  --panel-foreground: #f4e8c8;
+  --ring: #d4a84d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-parchment: var(--parchment);
+  --color-parchment-deep: var(--parchment-deep);
+  --color-aged-paper: var(--aged-paper);
+  --color-ink: var(--ink);
+  --color-faded-ink: var(--faded-ink);
+  --color-dark-gold: var(--dark-gold);
+  --color-burnished-gold: var(--burnished-gold);
+  --color-winter-blue: var(--winter-blue);
+  --color-snow-mist: var(--snow-mist);
+  --color-fog: var(--fog);
+  --color-war-smoke: var(--war-smoke);
+  --color-blood-rust: var(--blood-rust);
+  --color-forest-deep: var(--forest-deep);
+  --color-sea-muted: var(--sea-muted);
+  --color-panel: var(--panel);
+  --color-panel-foreground: var(--panel-foreground);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --shadow-map-glow: 0 0 40px color-mix(in srgb, var(--dark-gold) 25%, transparent);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 1180px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(212, 168, 77, 0.13), transparent 28rem),
+    radial-gradient(circle at 82% 8%, rgba(141, 168, 184, 0.12), transparent 24rem),
+    var(--background);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(115deg, rgba(32, 22, 15, 0.82), rgba(21, 17, 13, 0.92)),
+    radial-gradient(circle at 50% -10%, rgba(212, 168, 77, 0.16), transparent 40rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--burnished-gold) 45%, transparent);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--ink) 70%, transparent);
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--dark-gold) 70%, var(--aged-paper));
+  border-radius: 999px;
+}
+
+.parchment-surface {
+  background:
+    radial-gradient(circle at 20% 18%, rgba(255, 238, 180, 0.24), transparent 18rem),
+    radial-gradient(circle at 86% 72%, rgba(116, 51, 38, 0.12), transparent 15rem),
+    linear-gradient(135deg, rgba(216, 189, 130, 0.95), rgba(157, 118, 69, 0.9));
+  color: var(--ink);
+}
+
+.map-grain {
+  position: relative;
+}
+
+.map-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  mix-blend-mode: multiply;
+  background-image:
+    linear-gradient(90deg, rgba(32, 22, 15, 0.09) 1px, transparent 1px),
+    linear-gradient(rgba(32, 22, 15, 0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(circle at center, black, transparent 88%);
+}
+
+.weather-haze {
+  background:
+    radial-gradient(ellipse at 20% 28%, rgba(232, 240, 238, 0.3), transparent 18rem),
+    radial-gradient(ellipse at 74% 38%, rgba(197, 194, 174, 0.22), transparent 20rem),
+    radial-gradient(ellipse at 56% 78%, rgba(64, 55, 45, 0.2), transparent 18rem);
+}
+
+.sandtable-viewport {
+  perspective: 1400px;
+  box-shadow:
+    inset 0 0 0 1px rgba(212, 168, 77, 0.26),
+    inset 0 24px 80px rgba(255, 228, 165, 0.05),
+    inset 0 -42px 90px rgba(0, 0, 0, 0.38);
+}
+
+.sandtable-transform {
+  will-change: transform;
+  filter: saturate(1.02) contrast(1.04);
+}
+
+.sandtable-viewport[data-map-dragging="true"] .sandtable-transform {
+  filter: saturate(1.06) contrast(1.06) drop-shadow(0 18px 34px rgba(0, 0, 0, 0.22));
+}
+
+.sandtable-viewport[data-sandtable-zoom-tier="near"] .sandtable-transform,
+.sandtable-viewport[data-sandtable-zoom-tier="max"] .sandtable-transform {
+  filter: saturate(1.04) contrast(1.08) drop-shadow(0 10px 24px rgba(0, 0, 0, 0.16));
+}
+
+.sandtable-glass {
+  background:
+    radial-gradient(circle at 38% 18%, rgba(255, 229, 168, 0.12), transparent 22rem),
+    linear-gradient(125deg, rgba(255, 244, 210, 0.05), transparent 34%, rgba(0, 0, 0, 0.18));
+  mix-blend-mode: soft-light;
+}
+
+.map-cloud-drift {
+  animation: map-cloud-drift 28s ease-in-out infinite alternate;
+}
+
+.map-cloud-drift-slow {
+  animation: map-cloud-drift-slow 42s ease-in-out infinite alternate;
+}
+
+.map-fog-pulse {
+  animation: map-fog-pulse 18s ease-in-out infinite;
+}
+
+.map-snow-particle {
+  animation-name: map-snow-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 8px rgba(232, 240, 238, 0.55);
+}
+
+.map-smoke-drift {
+  animation: map-smoke-drift 34s ease-in-out infinite alternate;
+}
+
+@keyframes map-cloud-drift {
+  from {
+    transform: translate3d(-2%, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(13%, 5%, 0) scale(1.08);
+  }
+}
+
+@keyframes map-cloud-drift-slow {
+  from {
+    transform: translate3d(8%, -2%, 0) scale(1.02);
+  }
+  to {
+    transform: translate3d(-16%, 3%, 0) scale(1.12);
+  }
+}
+
+@keyframes map-fog-pulse {
+  0%,
+  100% {
+    opacity: 0.48;
+  }
+  50% {
+    opacity: 0.78;
+  }
+}
+
+@keyframes map-snow-fall {
+  from {
+    transform: translate3d(0, -12px, 0);
+  }
+  to {
+    transform: translate3d(18px, 170px, 0);
+  }
+}
+
+@keyframes map-smoke-drift {
+  from {
+    opacity: 0.45;
+    transform: translate3d(-3%, 2%, 0) scale(0.96);
+  }
+  to {
+    opacity: 0.7;
+    transform: translate3d(10%, -4%, 0) scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .map-snow-particle {
+    display: none !important;
+  }
+}

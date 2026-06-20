@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Robb calls the banners placeholder art</title>
+  <desc id="desc">Original illustration of northern banners gathering around campfires.</desc>
+  <rect width="800" height="600" fill="#caa56e"/>
+  <path d="M0 425 C185 358 344 386 501 422 C621 450 717 446 800 404 V600 H0Z" fill="#4f3f2c" opacity=".62"/>
+  <g stroke="#1f140c" stroke-width="6" stroke-linecap="round">
+    <path d="M178 417 V166"/>
+    <path d="M204 172 c-43-25-74-20-107 8v115c37-25 71-22 107 6z" fill="#334b3b"/>
+    <path d="M377 395 V132"/>
+    <path d="M405 139 c-46-27-80-23-117 7v119c41-27 76-24 117 6z" fill="#5b2f2e"/>
+    <path d="M594 411 V180"/>
+    <path d="M620 186 c-43-23-73-18-105 8v107c37-23 68-21 105 5z" fill="#35445d"/>
+  </g>
+  <g fill="#b85e2c" opacity=".9">
+    <path d="M265 469 l31-69 31 69z"/>
+    <path d="M475 486 l26-58 28 58z"/>
+  </g>
+  <text x="56" y="78" fill="#2b1b11" font-family="Georgia, serif" font-size="31">THE NORTH REMEMBERS</text>
+</svg>

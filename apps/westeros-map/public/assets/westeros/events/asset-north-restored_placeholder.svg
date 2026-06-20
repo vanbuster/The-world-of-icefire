@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">The North restored to Stark placeholder art</title>
+  <desc id="desc">Original symbolic hall illustration for the Stark restoration in the North.</desc>
+  <rect width="800" height="600" fill="#c7a36e"/>
+  <path d="M181 112 h438 v386 H181z" fill="#4d3422" stroke="#22150d" stroke-width="8"/>
+  <path d="M243 165 h314 v276 H243z" fill="#8d6541"/>
+  <path d="M398 165 L270 441 h255Z" fill="#ead8a5" opacity=".2"/>
+  <path d="M351 289 c29-54 76-55 104 0 c-18-10-37-10-52 5 c-16-15-35-15-52-5Z" fill="#203621" stroke="#172415" stroke-width="5"/>
+  <path d="M403 294 v93" stroke="#203621" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#24160d" stroke-width="4">
+    <path d="M273 456 h254"/>
+    <path d="M302 441 v-64 M498 441 v-64"/>
+  </g>
+  <text x="55" y="78" fill="#2b1b11" font-family="Georgia, serif" font-size="31">THE NORTH RESTORED</text>
+</svg>

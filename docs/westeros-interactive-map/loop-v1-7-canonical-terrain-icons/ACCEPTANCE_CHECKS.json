@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ICON-001",
+    "phase": "loop",
+    "description": "V1.7 canonical terrain and location-specific icon loop exists and is marked active.",
+    "status": "passing",
+    "evidence": "Created V1_7_CANONICAL_TERRAIN_ICONS_LOOP_PROMPT.md, loop-v1-7-canonical-terrain-icons status directory, and ACTIVE_LOOP.md points to V1.7.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-002",
+    "phase": "knowledge",
+    "description": "Geography sidecar knowledge base includes V1.7 terrain richness, per-location icon briefs, target definitions, and execution status.",
+    "status": "passing",
+    "evidence": "WESTEROS_GEOGRAPHY_KNOWLEDGE_BASE.md now contains section 0 with project goals, current execution status, asset entries, unresolved risks, V1.7 terrain requirements, and per-location icon briefs.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-003",
+    "phase": "generation",
+    "description": "Twelve named location-specific node icon assets are generated and saved in the public asset directory.",
+    "status": "passing",
+    "evidence": "Generated and cropped 12 files in apps/westeros-map/public/assets/westeros/generated/v17/nodes/map-node-<location-id>-v1.png from private source apps/westeros-map/private/generated-working/v17/location-node-icons-contact-sheet-v1-source.png.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-004",
+    "phase": "frontend",
+    "description": "Map nodes use location-id-specific icon assets before falling back to generic type assets.",
+    "status": "passing",
+    "evidence": "MapNode.tsx now defines locationNodeArtMap and resolves nodeArt via location.id before falling back to nodeTypeArtMap[location.type].",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-005",
+    "phase": "tests",
+    "description": "E2E tests verify each known location uses a distinct named node icon rather than the shared castle icon.",
+    "status": "passing",
+    "evidence": "tests/e2e/map.spec.ts asserts V1.7 file names for all 12 location IDs, verifies data-map-node-art-key equals the location ID, checks computed backgroundImage, and requires 12 distinct node art paths.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-006",
+    "phase": "terrain",
+    "description": "A V4 terrain-rich map strategy or asset is produced from the expanded geography brief.",
+    "status": "passing",
+    "evidence": "Generated V4 terrain-rich map at apps/westeros-map/public/assets/westeros/generated/v17/westeros-sandtable-map-v4-terrain.png from private source apps/westeros-map/private/generated-working/v17/westeros-sandtable-map-v4-terrain-source.png; frontend natural size verified as 3762x2117.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-007",
+    "phase": "assets",
+    "description": "New V1.7 generated assets are recorded in ASSET_MANIFEST.md and PRIVATE_REFERENCE_REGISTER.md.",
+    "status": "passing",
+    "evidence": "ASSET_MANIFEST.md records V4 map, V3 historical map, and 12 V1.7 node icons; PRIVATE_REFERENCE_REGISTER.md records PRIV-REF-009 contact sheet source and PRIV-REF-010 V4 map source.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-008",
+    "phase": "verify",
+    "description": "Screenshots prove the named icons and richer terrain direction are visible in the frontend.",
+    "status": "passing",
+    "evidence": "Captured screenshots in apps/westeros-map/test-results/visual-v1-7-canonical-terrain-icons/: 1440x900-home-v17-terrain-icons.png, 1920x1080-home-v17-terrain-icons.png, 1440x900-winterfell-detail-v17-terrain-icons.png, and 1440x900-map-zoom-v17-terrain-icons.png.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  },
+  {
+    "id": "ICON-009",
+    "phase": "verify",
+    "description": "typecheck, lint, unit tests, E2E tests, and production build pass after V1.7 icon and terrain changes.",
+    "status": "passing",
+    "evidence": "npm run typecheck passed; npm run lint passed; npm run test:unit passed with 9 tests; npm run test:e2e passed with 12 tests; npm run build passed.",
+    "updatedAt": "2026-06-20T18:58:00+0800"
+  }
+]

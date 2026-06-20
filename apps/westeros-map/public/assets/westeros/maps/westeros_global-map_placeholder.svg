@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Original Westeros global map placeholder</title>
+  <desc id="desc">A hand-drawn parchment style placeholder map for a public fan project. It does not copy official map artwork.</desc>
+  <defs>
+    <radialGradient id="paper" cx="48%" cy="44%" r="76%">
+      <stop offset="0" stop-color="#e1c792"/>
+      <stop offset="0.58" stop-color="#caa56a"/>
+      <stop offset="1" stop-color="#6d4728"/>
+    </radialGradient>
+    <linearGradient id="land" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#c7a16a"/>
+      <stop offset="0.5" stop-color="#b98750"/>
+      <stop offset="1" stop-color="#8b5a35"/>
+    </linearGradient>
+    <filter id="rough">
+      <feTurbulence baseFrequency="0.018" numOctaves="4" seed="19" type="fractalNoise"/>
+      <feColorMatrix type="saturate" values="0.22"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <filter id="lifted" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#1f130b" flood-opacity=".34"/>
+    </filter>
+    <linearGradient id="ridge" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ead39e" stop-opacity=".58"/>
+      <stop offset=".45" stop-color="#7c5736" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#2e1b10" stop-opacity=".36"/>
+    </linearGradient>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M0 30 C38 12 84 48 120 20 M0 76 C42 61 69 92 120 72" fill="none" stroke="#70421f" stroke-opacity=".08" stroke-width="2"/>
+      <circle cx="18" cy="90" r="1.2" fill="#3a2112" opacity=".16"/>
+      <circle cx="77" cy="33" r="1.1" fill="#fff3c2" opacity=".12"/>
+    </pattern>
+    <symbol id="mountain" viewBox="0 0 60 42">
+      <path d="M4 38 22 7l10 18L43 2l13 36Z" fill="#5d4a34" opacity=".64" stroke="#321e12" stroke-width="2"/>
+      <path d="m22 7 2 14 7 4 M43 2l-3 21 9 15" fill="none" stroke="#e6d2a0" stroke-opacity=".42" stroke-width="2"/>
+    </symbol>
+    <symbol id="mini-castle" viewBox="0 0 72 72">
+      <path d="M12 62V25h10V12h12v13h8V12h12v13h8v37Z" fill="#3f2b1c" stroke="#1f140c" stroke-width="3"/>
+      <path d="M28 62V46a8 8 0 0 1 16 0v16" fill="#18100a"/>
+      <path d="M18 31h38" stroke="#d9c08a" stroke-opacity=".42" stroke-width="3"/>
+    </symbol>
+    <symbol id="pine" viewBox="0 0 36 52">
+      <path d="M18 4 6 21h7L3 36h12v12h6V36h12L23 21h7Z" fill="#243820" stroke="#152314" stroke-width="2"/>
+    </symbol>
+  </defs>
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <rect width="1600" height="900" fill="url(#grain)" opacity=".72"/>
+  <path d="M92 710 C190 650 281 657 332 705 C430 785 556 792 653 733 C751 674 842 689 946 755 C1062 828 1226 810 1349 730 C1467 653 1520 634 1576 651 L1600 900 H0 V754 C24 739 56 725 92 710Z" fill="#304e55" opacity=".26"/>
+  <path d="M1014 101 C1067 132 1077 202 1049 257 C1025 305 1052 353 1114 384 C1183 420 1198 484 1163 544 C1138 587 1157 641 1215 679 C1145 701 1063 697 1009 658 C964 625 915 609 867 632 C811 660 741 637 729 578 C719 532 678 509 628 526 C568 548 493 531 476 475 C461 424 494 381 544 363 C607 340 613 291 565 254 C518 218 530 153 587 118 C638 86 695 101 737 137 C776 171 827 156 861 115 C900 68 957 70 1014 101Z" fill="url(#land)" stroke="#2a1a10" stroke-width="4" filter="url(#lifted)"/>
+  <path d="M1014 101 C1067 132 1077 202 1049 257 C1025 305 1052 353 1114 384 C1183 420 1198 484 1163 544 C1138 587 1157 641 1215 679 C1145 701 1063 697 1009 658 C964 625 915 609 867 632 C811 660 741 637 729 578 C719 532 678 509 628 526 C568 548 493 531 476 475 C461 424 494 381 544 363 C607 340 613 291 565 254 C518 218 530 153 587 118 C638 86 695 101 737 137 C776 171 827 156 861 115 C900 68 957 70 1014 101Z" fill="url(#land)" stroke="#2a1a10" stroke-width="4" filter="url(#rough)"/>
+  <g id="v1-relief-ridges" fill="none" stroke="url(#ridge)" stroke-linecap="round" opacity=".78">
+    <path d="M594 155 C658 127 726 142 773 188" stroke-width="10"/>
+    <path d="M545 370 C617 347 690 367 734 426" stroke-width="8"/>
+    <path d="M926 304 C990 284 1056 308 1097 363" stroke-width="9"/>
+    <path d="M888 558 C955 518 1037 526 1096 590" stroke-width="8"/>
+    <path d="M1012 635 C1068 628 1118 642 1166 680" stroke-width="7"/>
+  </g>
+  <path d="M879 84 C843 122 815 159 804 220 C791 294 831 354 897 382 C978 416 993 486 941 551 C908 593 910 634 946 678" fill="none" stroke="#2b1a10" stroke-opacity=".28" stroke-width="6"/>
+  <path d="M560 255 C623 280 699 310 773 329 C875 354 962 352 1108 390" fill="none" stroke="#1e3a47" stroke-opacity=".42" stroke-width="7"/>
+  <path d="M650 515 C701 492 757 488 807 500 C875 517 922 561 967 613" fill="none" stroke="#1e3a47" stroke-opacity=".32" stroke-width="5"/>
+  <g id="v1-roads" fill="none" stroke="#4a2b17" stroke-linecap="round" stroke-dasharray="16 12" opacity=".52">
+    <path d="M664 180 C646 280 682 367 759 410 C830 451 875 509 907 621" stroke-width="5"/>
+    <path d="M905 620 C978 589 1045 607 1168 682" stroke-width="4"/>
+    <path d="M474 516 C568 480 652 466 760 478" stroke-width="4"/>
+  </g>
+  <g opacity=".86">
+    <use href="#mountain" x="748" y="97" width="76"/>
+    <use href="#mountain" x="802" y="132" width="66"/>
+    <use href="#mountain" x="847" y="181" width="72"/>
+    <use href="#mountain" x="913" y="254" width="62"/>
+    <use href="#mountain" x="575" y="384" width="56"/>
+    <use href="#mountain" x="1022" y="468" width="66"/>
+  </g>
+  <g fill="#243820" opacity=".55">
+    <path d="M593 141 C636 128 676 139 709 174 C669 184 621 192 584 179Z"/>
+    <path d="M543 435 C600 405 657 414 692 456 C639 476 588 481 532 461Z"/>
+    <path d="M998 578 C1042 548 1094 552 1135 588 C1081 604 1038 606 996 591Z"/>
+  </g>
+  <g id="v1-forests" opacity=".82">
+    <use href="#pine" x="584" y="132" width="36"/>
+    <use href="#pine" x="625" y="136" width="30"/>
+    <use href="#pine" x="665" y="143" width="34"/>
+    <use href="#pine" x="535" y="426" width="34"/>
+    <use href="#pine" x="578" y="418" width="32"/>
+    <use href="#pine" x="622" y="424" width="30"/>
+    <use href="#pine" x="1000" y="570" width="33"/>
+    <use href="#pine" x="1044" y="566" width="31"/>
+    <use href="#pine" x="1088" y="572" width="29"/>
+  </g>
+  <path d="M395 102 C513 80 665 74 808 82 C958 91 1080 116 1197 145" fill="none" stroke="#d9caab" stroke-width="14" stroke-linecap="round" opacity=".76"/>
+  <path d="M395 102 C513 80 665 74 808 82 C958 91 1080 116 1197 145" fill="none" stroke="#4a5c65" stroke-width="3" stroke-dasharray="18 15" stroke-linecap="round"/>
+  <g fill="#2f1c11" font-family="Georgia, serif" font-size="24" letter-spacing="1.5">
+    <text x="580" y="210">THE NORTH</text>
+    <text x="720" y="416">RIVERLANDS</text>
+    <text x="900" y="548">THE REACH</text>
+    <text x="996" y="672">DORNE</text>
+    <text x="982" y="355">THE VALE</text>
+    <text x="448" y="111" font-size="18">THE WALL</text>
+  </g>
+  <g fill="#1b110b" stroke="#d9c08a" stroke-width="3">
+    <circle cx="660" cy="178" r="8"/>
+    <circle cx="905" cy="620" r="7"/>
+    <circle cx="1005" cy="468" r="7"/>
+    <circle cx="1168" cy="682" r="7"/>
+  </g>
+  <g id="v1-miniature-castles" opacity=".88">
+    <use href="#mini-castle" x="626" y="150" width="62"/>
+    <use href="#mini-castle" x="875" y="590" width="54"/>
+    <use href="#mini-castle" x="979" y="440" width="52"/>
+    <use href="#mini-castle" x="1143" y="655" width="50"/>
+    <use href="#mini-castle" x="445" y="490" width="48"/>
+  </g>
+  <g id="v1-sea-and-coast" fill="#244d5a" opacity=".34">
+    <path d="M1219 698 C1290 667 1367 651 1468 649 C1422 686 1365 718 1302 737 C1262 749 1234 733 1219 698Z"/>
+    <path d="M334 705 C425 766 535 771 651 733 C577 798 450 812 348 755 C303 730 298 713 334 705Z"/>
+  </g>
+  <text x="1268" y="720" fill="#1b3540" font-family="Georgia, serif" font-size="20" letter-spacing="1.2" opacity=".76">SUMMER SEA</text>
+  <rect x="36" y="36" width="1528" height="828" fill="none" stroke="#3b2413" stroke-opacity=".36" stroke-width="7"/>
+  <rect x="55" y="55" width="1490" height="790" fill="none" stroke="#d5bd85" stroke-opacity=".38" stroke-width="2"/>
+</svg>

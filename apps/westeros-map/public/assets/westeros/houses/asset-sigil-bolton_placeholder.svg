@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Original abstract blade-scar sigil placeholder</title>
+  <desc id="desc">An original red scar and blade mark, not copied from official heraldry.</desc>
+  <rect width="512" height="512" rx="36" fill="#d7c1a0"/>
+  <path d="M262 58 C228 132 218 198 234 257 C248 309 235 370 190 456" fill="none" stroke="#7b1d1d" stroke-width="38" stroke-linecap="round"/>
+  <path d="M344 77 C312 154 314 221 351 282 C379 329 373 382 330 444" fill="none" stroke="#31150f" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+  <path d="M164 162 l210 236" stroke="#7b1d1d" stroke-width="22" stroke-linecap="round" opacity=".75"/>
+</svg>

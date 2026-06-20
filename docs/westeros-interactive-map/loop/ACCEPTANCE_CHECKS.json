@@ -1,0 +1,443 @@
+[
+  {
+    "id": "DOC-001",
+    "phase": "docs",
+    "description": "PRD and project constraints exist and are referenced as the product source of truth.",
+    "status": "passing",
+    "evidence": "Verified files exist and were read: WESTEROS_INTERACTIVE_MAP_CONSTRAINTS.md, docs/westeros-interactive-map/PRD.md, docs/westeros-interactive-map/BUILD_GREAT_LOOP_PROMPT.md.",
+    "updatedAt": "2026-06-18T00:57:10+0800"
+  },
+  {
+    "id": "DOC-002",
+    "phase": "docs",
+    "description": "IA and content model document exists and covers site information architecture, frontend content structure, CMS content types, entity relationships, and sourceType rules.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/IA_CONTENT_MODEL.md (746 lines). Verified coverage with rg for information architecture, entity relationships, Location, Asset, Event, CMS navigation, xPercent/yPercent, sourceType rules, Winterfell, Battle of the Bastards, MVP required/reserved scope.",
+    "updatedAt": "2026-06-18T01:15:57+0800",
+    "claimedAt": "2026-06-18T00:58:51+0800"
+  },
+  {
+    "id": "DOC-003",
+    "phase": "docs",
+    "description": "Technical architecture document exists and covers frontend, CMS, data flow, asset flow, testing, deployment, and graceful degradation.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/TECH_ARCHITECTURE.md (608 lines). Verified with rg for frontend architecture, CMS architecture, data architecture, asset architecture, testing architecture, deployment architecture, degradation strategy, Payload, PostgreSQL, Next.js, Zustand, Playwright, PixiJS/Three.js, view model, and ADR sections.",
+    "updatedAt": "2026-06-18T01:21:41+0800",
+    "claimedAt": "2026-06-18T01:18:02+0800"
+  },
+  {
+    "id": "DOC-004",
+    "phase": "docs",
+    "description": "Visual and asset guide exists and covers visual style, asset sourcing, generation rules, copyright boundaries, image naming, and asset registration.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/VISUAL_ASSET_GUIDE.md (480 lines). Verified with rg for visual goals, parchment/miniature landscape style, animation rules, asset types, image naming, asset directories, AI generation rules, forbidden prompts, online reference rules, copyright risk levels, Asset Manifest, Source Register, MVP asset checklist, and visual acceptance criteria.",
+    "updatedAt": "2026-06-18T01:26:22+0800",
+    "claimedAt": "2026-06-18T01:23:02+0800"
+  },
+  {
+    "id": "DOC-005",
+    "phase": "docs",
+    "description": "Implementation guide exists and covers directory structure, modules, run commands, test commands, and development conventions.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/IMPLEMENTATION_GUIDE.md (499 lines). Verified with rg for app directory structure, frontend modules, types and data layer, state management, CMS implementation, seed data, asset workflow, package commands, test conventions, environment variables, error handling, development increments, and definition of done.",
+    "updatedAt": "2026-06-18T01:41:44+0800",
+    "claimedAt": "2026-06-18T01:27:48+0800"
+  },
+  {
+    "id": "DOC-006",
+    "phase": "docs",
+    "description": "Task breakdown exists and lists phases, tasks, acceptance criteria, dependencies, and recommended order.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/TASK_BREAKDOWN.md (470 lines). Verified with rg for phase overview P0-P11, tasks, acceptance criteria, dependencies, recommended execution order, CMS, seed, Playwright, deployment, and common definition of done.",
+    "updatedAt": "2026-06-18T01:46:42+0800",
+    "claimedAt": "2026-06-18T01:43:17+0800"
+  },
+  {
+    "id": "DOC-007",
+    "phase": "docs",
+    "description": "Deployment documentation and README exist and explain local startup, environment variables, CMS admin, seed data, testing, deployment preparation, and copyright notes.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/DEPLOYMENT.md (253 lines) and docs/westeros-interactive-map/README.md (89 lines). Verified with rg for local startup, environment variables, CMS admin, seed data, testing, Vercel/Railway/Render/Supabase deployment preparation, .env.example, copyright, and asset notes.",
+    "updatedAt": "2026-06-18T01:51:17+0800",
+    "claimedAt": "2026-06-18T01:47:58+0800"
+  },
+  {
+    "id": "APP-001",
+    "phase": "app",
+    "description": "Next.js + TypeScript application is initialized in apps/westeros-map or an adopted existing project directory.",
+    "status": "passing",
+    "evidence": "Created apps/westeros-map with create-next-app using TypeScript, App Router, src dir, ESLint, and Tailwind template. Installed dependencies with npm after retrying stalled scaffold install. Verified node_modules and package-lock.json exist. Ran npm run lint and npm run build successfully. Set next.config.ts turbopack.root to app directory and verified build no longer shows workspace-root warning.",
+    "updatedAt": "2026-06-18T02:21:17+0800",
+    "claimedAt": "2026-06-18T01:54:01+0800"
+  },
+  {
+    "id": "APP-002",
+    "phase": "app",
+    "description": "Tailwind CSS and global visual theme are configured with parchment, ink, gold, snow, fog, and war visual tokens.",
+    "status": "passing",
+    "evidence": "Updated apps/westeros-map/src/app/globals.css with Tailwind v4 @theme tokens for parchment, ink, gold, snow, fog, war, panel, and map glow; added parchment-surface, map-grain, weather-haze, scrollbar, focus, selection, and prefers-reduced-motion rules. Updated layout metadata/lang and replaced default page with themed desktop placeholder. Verified npm run lint and npm run build pass. Verified http://localhost:3000 returns 200 and HTML contains project title, map stage, Detail Panel, and visual token text.",
+    "updatedAt": "2026-06-18T02:26:39+0800",
+    "claimedAt": "2026-06-18T02:22:15+0800"
+  },
+  {
+    "id": "APP-003",
+    "phase": "app",
+    "description": "Core TypeScript content and map types are implemented.",
+    "status": "passing",
+    "evidence": "Created apps/westeros-map/src/types/content.ts, map.ts, cms.ts, viewModels.ts, and index.ts. Types include SourceType, CanonLevel, PublishStatus, Location, Asset, Event, Character, House, Region, Storyline, TimelineEntry, SourceReference, MapLayer, WeatherLayer, CmsCollectionResponse, MapLocationViewModel, LocationDetailViewModel, TimelineItemViewModel, CharacterCardViewModel, HouseBadgeViewModel, and AssetViewModel. Added npm run typecheck. Verified npm run typecheck, npm run lint, rg key types, and npm run build pass.",
+    "updatedAt": "2026-06-18T02:29:34+0800",
+    "claimedAt": "2026-06-18T02:27:19+0800"
+  },
+  {
+    "id": "APP-004",
+    "phase": "app",
+    "description": "Mock or seed content data exists for regions, houses, characters, events, assets, and at least 10 locations.",
+    "status": "passing",
+    "evidence": "Created apps/westeros-map/src/data/mock with regions, houses, characters, assets, events, storylines, locations, and index exports. Data includes 12 locations, Winterfell as the MVP clickable location, 7 required Winterfell events, related characters/houses/assets, and Battle of the Bastards marked sourceType show-canon / canonLevel show-canon. Verified npm run typecheck, npm run lint, rg content markers, and npm run build pass.",
+    "updatedAt": "2026-06-18T02:36:40+0800",
+    "claimedAt": "2026-06-18T02:30:12+0800"
+  },
+  {
+    "id": "APP-005",
+    "phase": "app",
+    "description": "Desktop homepage layout exists and frames the product as an interactive map, not a marketing page.",
+    "status": "passing",
+    "evidence": "Added lucide-react for reusable UI icons. Created AppShell, TopNav, SideNav, and BottomLegendBar under apps/westeros-map/src/components/layout. Replaced the placeholder page with a desktop-first interactive map workbench: top toolbar, left world-view navigation, central map canvas area, right detail panel placeholder, and bottom legend/source bar. Verified npm run typecheck, npm run lint, npm run build, rg component markers, and curl HTML markers for title, map canvas, legend, and detail panel.",
+    "updatedAt": "2026-06-18T02:45:02+0800",
+    "claimedAt": "2026-06-18T02:39:20+0800"
+  },
+  {
+    "id": "APP-006",
+    "phase": "app",
+    "description": "WorldMap and map viewport components exist.",
+    "status": "passing",
+    "evidence": "Created apps/westeros-map/src/components/map/WorldMap.tsx, MapViewport.tsx, MapBackground.tsx, MapNodeLayer.tsx, and WeatherLayer.tsx. Replaced the central page map preview with WorldMap while keeping the desktop AppShell and right panel placeholders. Verified npm run typecheck, npm run lint, rg WorldMap component markers, npm run build, and curl HTML markers for WorldMap Viewport, map title, placeholder nodes, and Detail Panel.",
+    "updatedAt": "2026-06-18T02:51:08+0800",
+    "claimedAt": "2026-06-18T02:46:15+0800"
+  },
+  {
+    "id": "APP-007",
+    "phase": "app",
+    "description": "Map background and virtual coordinate system exist.",
+    "status": "passing",
+    "evidence": "Created apps/westeros-map/src/lib/map/coordinates.ts with 0-10000 virtual coordinate constants and conversion helpers: virtualToPercent, percentToVirtual, virtualToPixel, pixelToVirtual, coordinatePercentToCss, and virtualCoordinateToCss. Updated MapNodeLayer placeholder nodes to use virtual coordinates through the coordinate helper. MapBackground already provides a layered parchment-style fallback background. Verified npm run typecheck, npm run lint, rg coordinate helpers and virtualX markers, and npm run build pass.",
+    "updatedAt": "2026-06-18T02:58:02+0800",
+    "claimedAt": "2026-06-18T02:53:24+0800"
+  },
+  {
+    "id": "APP-008",
+    "phase": "app",
+    "description": "At least 10 location nodes render on the map.",
+    "status": "passing",
+    "evidence": "Created apps/westeros-map/src/lib/content/selectors.ts and MapNode.tsx. Updated MapLocationViewModel with virtual coordinates and changed MapNodeLayer to render getMapLocationViewModels() from published mock locations. The map now renders 12 data-driven location nodes, with Winterfell highlighted as the MVP clickable node. Verified npm run typecheck, npm run lint, rg selector/node markers, npm run build, curl node count = 12, and HTML key-location markers including 临冬城, 君临, 长城, 凯岩城, 高庭, 风息堡, 派克, and 阳戟城.",
+    "updatedAt": "2026-06-18T03:05:08+0800",
+    "claimedAt": "2026-06-18T02:59:28+0800"
+  },
+  {
+    "id": "APP-009",
+    "phase": "app",
+    "description": "Map node hover tooltip exists and shows location name, type, region, and related house basics.",
+    "status": "passing",
+    "evidence": "Added MapTooltip.tsx and upgraded MapNode/MapNodeLayer with client hover/focus state. Tooltip shows location name, English name, type, region, related houses, and status label. Added Playwright setup with playwright.config.ts, tests/e2e/map.spec.ts, and npm run test:e2e. Installed @playwright/test and Chromium browsers. Verified npm run typecheck, npm run lint, npm run test:e2e (2 passed: node count and Winterfell hover tooltip), and npm run build pass.",
+    "updatedAt": "2026-06-18T03:26:10+0800",
+    "claimedAt": "2026-06-18T03:06:30+0800"
+  },
+  {
+    "id": "APP-010",
+    "phase": "app",
+    "description": "Pan and zoom or equivalent map view controls are implemented.",
+    "status": "passing",
+    "evidence": "Installed Zustand and implemented src/stores/mapStore.ts plus src/lib/map/transform.ts. Updated MapViewport as a client interaction layer with zoom in/out, reset, zoom label, wheel zoom, pointer drag panning, and transform layer. Added Playwright coverage for zoom controls, reset, and drag panning. Verified npm run test:e2e (3 passed), npm run typecheck, npm run lint, rg transform/control markers, and npm run build pass.",
+    "updatedAt": "2026-06-18T03:36:18+0800",
+    "claimedAt": "2026-06-18T03:27:42+0800"
+  },
+  {
+    "id": "APP-011",
+    "phase": "app",
+    "description": "Clicking Winterfell opens the details panel while other nodes show a pending-detail affordance.",
+    "status": "passing",
+    "evidence": "Extended mapStore with selectedLocationId, pendingLocationId, isPanelOpen, openLocationPanel, showPendingLocation, and closePanel. Added DetailPanelHost with closed/open/pending panel states. Updated MapNode and MapNodeLayer so clicking Winterfell opens the detail panel and clicking non-MVP nodes shows a pending-detail affordance. Updated page to use DetailPanelHost. Verified npm run test:e2e (4 passed, including Winterfell open and King's Landing pending detail), npm run typecheck, npm run lint, and npm run build pass.",
+    "updatedAt": "2026-06-18T03:45:32+0800",
+    "claimedAt": "2026-06-18T03:38:10+0800"
+  },
+  {
+    "id": "APP-012",
+    "phase": "app",
+    "description": "Winterfell details panel exists with introduction, location facts, related houses, characters, events, timeline, local map, gallery, and source labels.",
+    "status": "passing",
+    "evidence": "Added sourceLabels.ts and expanded selectors with getLocationDetailViewModel plus asset, character, house, event, and location detail aggregation. Added SourceBadge, HouseBadge, CharacterCard, CharacterGrid, Timeline, LocalMap, AssetGallery, and LocationPanel components. DetailPanelHost now renders the full LocationPanel for Winterfell. Verified npm run typecheck, npm run lint, npm run test:e2e (4 passed, including Winterfell panel modules and Battle of the Bastards heading), npm run build, and rg markers for detail/local map/timeline/source labels/show-canon.",
+    "updatedAt": "2026-06-18T04:00:22+0800",
+    "claimedAt": "2026-06-18T03:47:12+0800"
+  },
+  {
+    "id": "APP-013",
+    "phase": "app",
+    "description": "Winterfell local map module exists.",
+    "status": "passing",
+    "evidence": "LocalMap.tsx renders the Winterfell local map module inside LocationPanel with labeled landmarks for 临冬城, 狼林, 白刀河, and 临冬镇. Verified npm run test:e2e includes the Winterfell local map landmarks test, and npm run typecheck, npm run lint, and npm run build pass.",
+    "updatedAt": "2026-06-18T04:10:58+0800",
+    "claimedAt": "2026-06-18T04:02:08+0800"
+  },
+  {
+    "id": "APP-014",
+    "phase": "app",
+    "description": "Winterfell timeline and event cards exist and include at least 7 required events.",
+    "status": "passing",
+    "evidence": "Timeline.tsx renders 7 Winterfell event cards from getEventsByLocationId sorted by order. E2E verifies all required events: Robert's visit, Starks leave for King's Landing, Bran's fall, Robb calls the banners, Winterfell falls, Battle of the Bastards, and North restored to Stark. npm run test:e2e, typecheck, lint, and build pass.",
+    "updatedAt": "2026-06-18T04:10:58+0800",
+    "claimedAt": "2026-06-18T04:10:58+0800"
+  },
+  {
+    "id": "APP-015",
+    "phase": "app",
+    "description": "Character cards and house display exist for Winterfell details.",
+    "status": "passing",
+    "evidence": "CharacterCard, CharacterGrid, and HouseBadge render related Winterfell people and houses. Added data-character-id and data-house-id hooks. E2E verifies 4 related houses, 10 related character cards, and key names including House Stark, House Bolton, Eddard Stark, Jon Snow, and Sansa Stark. npm run test:e2e, typecheck, lint, and build pass.",
+    "updatedAt": "2026-06-18T04:10:58+0800",
+    "claimedAt": "2026-06-18T04:10:58+0800"
+  },
+  {
+    "id": "APP-016",
+    "phase": "app",
+    "description": "sourceType and canon labels exist, including show/show-canon for Battle of the Bastards.",
+    "status": "passing",
+    "evidence": "SourceBadge now renders visible source/canon labels and raw data attributes data-source-type and data-canon-level. sourceLabels.ts maps novel/show/show-canon/mixed/original-note and book/show/mixed/fan canon levels. E2E verifies Battle of the Bastards has data-source-type='show-canon', data-canon-level='show-canon', and visible 剧集正典 labels. npm run test:e2e, typecheck, lint, and build pass.",
+    "updatedAt": "2026-06-18T04:10:58+0800",
+    "claimedAt": "2026-06-18T04:10:58+0800"
+  },
+  {
+    "id": "APP-017",
+    "phase": "app",
+    "description": "Cloud, snow, fog, smoke, or equivalent atmospheric animation layer exists.",
+    "status": "passing",
+    "evidence": "Enhanced WeatherLayer with animated cloud drift, slow fog drift, fog pulse, deterministic snow particles, and smoke drift. Added data-weather-layer, data-cloud-layer, data-snow-layer, and data-smoke-layer hooks. Added keyframes and reduced-motion snow hiding in globals.css. E2E verifies weather layers, 22 snow particles, smoke layer visibility, and computed cloud animation name. npm run test:e2e (8 passed), typecheck, lint, and build pass.",
+    "updatedAt": "2026-06-18T04:18:36+0800",
+    "claimedAt": "2026-06-18T04:12:14+0800"
+  },
+  {
+    "id": "APP-018",
+    "phase": "app",
+    "description": "Search entry, basic location search, and legend exist.",
+    "status": "passing",
+    "evidence": "Created SearchBox client component, replaced the TopNav search placeholder, and added data-bottom-legend to BottomLegendBar. Search uses getMapLocationViewModels and mapStore actions so selecting Winterfell opens details while selecting non-MVP locations shows pending detail. Fixed header z-index so dropdown is clickable over the map. E2E verifies location search and legend visibility. npm run test:e2e (9 passed), typecheck, lint, and build pass.",
+    "updatedAt": "2026-06-18T04:29:34+0800",
+    "claimedAt": "2026-06-18T04:20:18+0800"
+  },
+  {
+    "id": "APP-019",
+    "phase": "app",
+    "description": "Reduced-motion and performance degradation strategy is implemented.",
+    "status": "passing",
+    "evidence": "Global CSS includes prefers-reduced-motion degradation that collapses animation duration/iteration, disables smooth scrolling/transitions, and hides snow particles with !important. Added Playwright reduced-motion test using page.emulateMedia({ reducedMotion: 'reduce' }) to verify map content remains available, 12 nodes still render, snow particles are hidden, and cloud animation duration is reduced. Verified npm run test:e2e (10 passed), typecheck, lint, and build pass.",
+    "updatedAt": "2026-06-18T04:39:18+0800",
+    "claimedAt": "2026-06-18T04:30:48+0800"
+  },
+  {
+    "id": "CMS-001",
+    "phase": "cms",
+    "description": "Payload CMS or equivalent CMS is installed and configured.",
+    "status": "passing",
+    "evidence": "Installed Payload 3.85.1 packages: payload, @payloadcms/next, @payloadcms/db-postgres, @payloadcms/richtext-lexical, and sharp. Added payload.config.ts with Postgres adapter, lexical editor, Users and Media collections, admin user config, GraphQL/type output paths, and env-based secret/database URI. Added Next admin, REST, GraphQL, and GraphQL playground routes under src/app/(payload). Added @payload-config tsconfig alias, withPayload next config wrapper, .env.example, and Payload scripts. Verified npm run lint, npm run typecheck, rg config/routes/env markers, and npm run build pass with dynamic routes for /admin, /api/[...slug], /api/graphql, and /api/graphql-playground.",
+    "updatedAt": "2026-06-18T04:58:12+0800",
+    "claimedAt": "2026-06-18T04:58:12+0800"
+  },
+  {
+    "id": "CMS-002",
+    "phase": "cms",
+    "description": "Single administrator login is available.",
+    "status": "passing",
+    "evidence": "Users collection has auth: true and payload.config.ts sets admin.user = Users.slug. README documents the MVP single Payload users auth collection, no multi-role permission system, /admin URL, and local first-user/bootstrap flow using PAYLOAD_ADMIN_EMAIL and PAYLOAD_ADMIN_PASSWORD from .env.example. Verified npm run typecheck, npm run lint, and rg auth/admin/bootstrap markers.",
+    "updatedAt": "2026-06-18T05:02:34+0800",
+    "claimedAt": "2026-06-18T05:02:34+0800"
+  },
+  {
+    "id": "CMS-003",
+    "phase": "cms",
+    "description": "Locations management is available in the CMS.",
+    "status": "passing",
+    "evidence": "Created Locations collection with nameZh/nameEn, aliases, type, region relationship, relatedHouses, descriptions, political/geography fields, mapPosition group with xPercent/yPercent/virtualX/virtualY, iconType, nodeLevel, visibleZoomRange, isMvpClickable, detailSections, relatedCharacters, relatedEvents, relatedAssets, localMap, sourceType/canonLevel/status, and drafts enabled. Registered Locations in payload.config.ts. Verified npm run typecheck, lint, build, and rg location field markers.",
+    "updatedAt": "2026-06-18T05:17:22+0800",
+    "claimedAt": "2026-06-18T05:04:18+0800"
+  },
+  {
+    "id": "CMS-004",
+    "phase": "cms",
+    "description": "Assets or Media management and source records are available in the CMS.",
+    "status": "passing",
+    "evidence": "Expanded Media collection with upload support, title, alt, assetType, sourceType, sourceUrl, author, sourceParty, isAIGenerated, isDerivative, licenseStatus, riskLevel, usageScope, generationPromptSummary, referenceNotes, notes, status, and drafts. Verified npm run typecheck, lint, build, and rg source/license/risk markers.",
+    "updatedAt": "2026-06-18T05:17:22+0800",
+    "claimedAt": "2026-06-18T05:17:22+0800"
+  },
+  {
+    "id": "CMS-005",
+    "phase": "cms",
+    "description": "Characters, Events, Houses, and Storylines models are reserved or scaffolded for future editing.",
+    "status": "passing",
+    "evidence": "Created scaffolded Payload collections for Regions, Houses, Characters, Events, and Storylines with key fields, relationships, sourceType/canonLevel/status fields, and drafts enabled. Registered all collections in payload.config.ts. Verified npm run typecheck, lint, build, and rg collection slug markers.",
+    "updatedAt": "2026-06-18T05:17:22+0800",
+    "claimedAt": "2026-06-18T05:17:22+0800"
+  },
+  {
+    "id": "CMS-006",
+    "phase": "cms",
+    "description": "Draft and published status controls exist for core content.",
+    "status": "passing",
+    "evidence": "Added reusable statusField with draft/published options and admin sidebar description. Applied statusField and versions.drafts to Media, Regions, Houses, Characters, Events, Storylines, and Locations. Verified npm run typecheck, lint, build, and rg statusField/drafts markers.",
+    "updatedAt": "2026-06-18T05:17:22+0800",
+    "claimedAt": "2026-06-18T05:17:22+0800"
+  },
+  {
+    "id": "CMS-007",
+    "phase": "cms",
+    "description": "Seed data script exists for locations, Winterfell details, 7 events, core characters, houses, and asset records.",
+    "status": "passing",
+    "evidence": "Created src/seed/index.ts plus public/media/seed-placeholder.svg and package script npm run seed. Seed script maps mock regions, media/assets, houses, characters, locations, events, and storylines into Payload collections, includes admin bootstrap from PAYLOAD_ADMIN_EMAIL/PASSWORD, preserves Battle of the Bastards show-canon metadata, and defaults to no execution unless RUN_PAYLOAD_SEED=true. Verified npx tsx src/seed/index.ts safe-loads without DB writes, npm run typecheck, npm run lint, npm run build, and rg seed markers pass.",
+    "updatedAt": "2026-06-18T05:29:48+0800",
+    "claimedAt": "2026-06-18T05:19:08+0800"
+  },
+  {
+    "id": "CMS-008",
+    "phase": "cms",
+    "description": "Frontend reads published CMS data or has a documented fallback strategy.",
+    "status": "passing",
+    "evidence": "Added src/lib/cms/dataSource.ts and src/lib/cms/README.md as the frontend CMS data boundary. MapNodeLayer, SearchBox, and DetailPanelHost now read through getFrontendContentSnapshot(), which currently returns mock-fallback content and documents the future Payload published-data switch using NEXT_PUBLIC_CONTENT_SOURCE. .env.example includes NEXT_PUBLIC_CONTENT_SOURCE=mock. E2E verifies frontend behavior still works with 10 passing tests. Verified npm run typecheck, lint, build, and rg fallback/published-data markers.",
+    "updatedAt": "2026-06-18T05:38:10+0800",
+    "claimedAt": "2026-06-18T05:31:20+0800"
+  },
+  {
+    "id": "ASSET-001",
+    "phase": "assets",
+    "description": "SOURCE_REGISTER exists and records online reference sources.",
+    "status": "passing",
+    "evidence": "Updated docs/westeros-interactive-map/SOURCE_REGISTER.md with 12 online reference sources covering Winterfell, key book/show events, House Stark, medieval map references, parchment texture references, and visual research sources. Sources are used for summary/reference only and explicitly prohibit copying official or third-party artwork/text.",
+    "updatedAt": "2026-06-18T14:33:43+0800"
+  },
+  {
+    "id": "ASSET-002",
+    "phase": "assets",
+    "description": "ASSET_MANIFEST exists and records generated or drawn assets.",
+    "status": "passing",
+    "evidence": "Updated docs/westeros-interactive-map/ASSET_MANIFEST.md with 14 project assets: global map, Winterfell local map, 7 Winterfell event illustrations, and 5 core house sigils. Each row records path, type, source type, author, AI/derivative flags, linked location/event/house, generation notes, and risk notes.",
+    "updatedAt": "2026-06-18T14:33:43+0800"
+  },
+  {
+    "id": "ASSET-003",
+    "phase": "assets",
+    "description": "Westeros map background is an original, generated, or redrawn style asset.",
+    "status": "passing",
+    "evidence": "Created original SVG map background at apps/westeros-map/public/assets/westeros/maps/westeros_global-map_placeholder.svg and wired WorldMap/MapBackground to render it. The asset is a hand-drawn parchment-style placeholder and does not copy official map artwork.",
+    "updatedAt": "2026-06-18T14:33:43+0800"
+  },
+  {
+    "id": "ASSET-004",
+    "phase": "assets",
+    "description": "Winterfell local map is an original, generated, or redrawn style asset.",
+    "status": "passing",
+    "evidence": "Created original SVG Winterfell local map at apps/westeros-map/public/assets/westeros/local-maps/winterfell_local-map_placeholder.svg and updated LocalMap to use the asset as the panel background while preserving landmark labels.",
+    "updatedAt": "2026-06-18T14:33:43+0800"
+  },
+  {
+    "id": "ASSET-005",
+    "phase": "assets",
+    "description": "The 7 Winterfell key events have generated art, drawn art, or explicit placeholder assets.",
+    "status": "passing",
+    "evidence": "Created 7 original SVG event placeholder artworks under apps/westeros-map/public/assets/westeros/events for Robert's arrival, Starks leaving, Bran's fall, Robb calling banners, Winterfell falling, Battle of the Bastards, and North restored. AssetGallery now renders asset image paths.",
+    "updatedAt": "2026-06-18T14:33:43+0800"
+  },
+  {
+    "id": "ASSET-006",
+    "phase": "assets",
+    "description": "Core public assets do not directly use unauthorized official images.",
+    "status": "passing",
+    "evidence": "Core public assets are original SVG files created in the repository. SOURCE_REGISTER and ASSET_MANIFEST state that online sources are only references, and no official maps, show stills, or third-party image files are imported into public assets. Verified with find apps/westeros-map/public/assets/westeros -type f showing only local SVGs.",
+    "updatedAt": "2026-06-18T14:33:43+0800"
+  },
+  {
+    "id": "TEST-001",
+    "phase": "test",
+    "description": "Lint command passes.",
+    "status": "passing",
+    "evidence": "Ran npm run lint in apps/westeros-map after asset, selector, and test changes. ESLint exited 0.",
+    "updatedAt": "2026-06-18T14:54:51+0800"
+  },
+  {
+    "id": "TEST-002",
+    "phase": "test",
+    "description": "Typecheck command passes.",
+    "status": "passing",
+    "evidence": "Ran npm run typecheck in apps/westeros-map after asset, selector, and test changes. tsc --noEmit exited 0.",
+    "updatedAt": "2026-06-18T14:54:51+0800"
+  },
+  {
+    "id": "TEST-003",
+    "phase": "test",
+    "description": "Unit or component tests pass.",
+    "status": "passing",
+    "evidence": "Installed Vitest, added npm run test:unit, vitest.config.ts, tests/unit/coordinates.test.ts, and tests/unit/selectors.test.ts. Ran npm run test:unit: 2 test files and 7 tests passed.",
+    "updatedAt": "2026-06-18T14:54:51+0800"
+  },
+  {
+    "id": "TEST-004",
+    "phase": "test",
+    "description": "Production build command passes.",
+    "status": "passing",
+    "evidence": "Ran npm run build in apps/westeros-map. Next.js production build compiled successfully, completed TypeScript, generated static pages, and listed routes for /, /admin, /api/[...slug], /api/graphql, and /api/graphql-playground.",
+    "updatedAt": "2026-06-18T14:54:51+0800"
+  },
+  {
+    "id": "TEST-005",
+    "phase": "test",
+    "description": "Playwright or equivalent E2E critical path passes.",
+    "status": "passing",
+    "evidence": "Ran npm run test:e2e in apps/westeros-map. Playwright Chromium critical path suite passed 10/10 tests covering shell/nodes, hover tooltip, pan/zoom, Winterfell panel, local map, timeline/show-canon labels, characters/houses, weather, search/legend, and reduced motion.",
+    "updatedAt": "2026-06-18T14:54:51+0800"
+  },
+  {
+    "id": "TEST-006",
+    "phase": "test",
+    "description": "Browser screenshot or manual visual verification is completed.",
+    "status": "passing",
+    "evidence": "Started production server on localhost:3001, captured screenshots to apps/westeros-map/test-results/visual-production/home-map.png and winterfell-panel.png, and verified title, 12 map nodes, Winterfell local map, gallery, 8 gallery images, Battle of the Bastards visibility, no nextjs dev portal, and 0 browser console/page errors. Stopped the temporary production server after capture.",
+    "updatedAt": "2026-06-18T14:54:51+0800"
+  },
+  {
+    "id": "DEPLOY-001",
+    "phase": "deploy",
+    "description": ".env.example exists and contains no real secrets.",
+    "status": "passing",
+    "evidence": "Verified apps/westeros-map/.env.example exists and contains placeholder values only: NEXT_PUBLIC_SITE_URL, NEXT_PUBLIC_CONTENT_SOURCE, PAYLOAD_SECRET=replace-with-a-long-random-secret-before-deploy, DATABASE_URI local placeholder, PAYLOAD_ADMIN_EMAIL=admin@example.com, and PAYLOAD_ADMIN_PASSWORD=replace-before-use. No real secrets are present.",
+    "updatedAt": "2026-06-18T14:57:46+0800"
+  },
+  {
+    "id": "DEPLOY-002",
+    "phase": "deploy",
+    "description": "Local startup instructions are complete.",
+    "status": "passing",
+    "evidence": "Verified apps/westeros-map/README.md and docs/westeros-interactive-map/DEPLOYMENT.md document npm install, npm run dev, frontend URL, CMS admin URL, API URLs, and production smoke commands npm run build plus PORT=3001 npm run start.",
+    "updatedAt": "2026-06-18T14:57:46+0800"
+  },
+  {
+    "id": "DEPLOY-003",
+    "phase": "deploy",
+    "description": "CMS admin and seed instructions are complete.",
+    "status": "passing",
+    "evidence": "Verified apps/westeros-map/README.md and docs/westeros-interactive-map/DEPLOYMENT.md document /admin, Payload single-admin model, required admin bootstrap env vars, npm run seed, seed contents, and the rule that real DB seed/migration actions require operator confirmation.",
+    "updatedAt": "2026-06-18T14:57:46+0800"
+  },
+  {
+    "id": "DEPLOY-004",
+    "phase": "deploy",
+    "description": "Deployment preparation instructions are complete.",
+    "status": "passing",
+    "evidence": "Verified docs/westeros-interactive-map/DEPLOYMENT.md covers deployment preparation for Vercel plus hosted PostgreSQL, Railway/Render, media storage migration to R2/S3/Supabase Storage, pre-deploy checklist, rollback notes, and known risks.",
+    "updatedAt": "2026-06-18T14:57:46+0800"
+  },
+  {
+    "id": "DEPLOY-005",
+    "phase": "deploy",
+    "description": "Copyright and asset usage notes are complete.",
+    "status": "passing",
+    "evidence": "Verified docs/westeros-interactive-map/DEPLOYMENT.md, VISUAL_ASSET_GUIDE.md, SOURCE_REGISTER.md, ASSET_MANIFEST.md, and apps/westeros-map/README.md document non-commercial fan-work boundaries, no unauthorized official maps/stills/actor photos/core commercial assets, source registration, AI/generated/repainted asset rules, and public asset risk notes.",
+    "updatedAt": "2026-06-18T14:57:46+0800"
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "UVR-001",
+    "phase": "merge",
+    "description": "Unified visual release loop exists and is marked as the single active continuation.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/V1_UNIFIED_VISUAL_RELEASE_LOOP_PROMPT.md and docs/westeros-interactive-map/loop-v1-unified-visual-release/.",
+    "updatedAt": "2026-06-19T16:17:31+0800"
+  },
+  {
+    "id": "UVR-002",
+    "phase": "merge",
+    "description": "V1 release loop is treated as completed baseline, not a competing active loop.",
+    "status": "passing",
+    "evidence": "docs/westeros-interactive-map/loop-v1-release/ACCEPTANCE_CHECKS.json has 29 total checks and 29 passing checks; OPERATOR_STATUS.md says complete.",
+    "updatedAt": "2026-06-19T16:17:31+0800"
+  },
+  {
+    "id": "UVR-003",
+    "phase": "merge",
+    "description": "V1.5 art remix loop is treated as a source queue and superseded by the unified active loop.",
+    "status": "passing",
+    "evidence": "docs/westeros-interactive-map/loop-v1-5-art-remix/ACCEPTANCE_CHECKS.json had 4 passing setup checks and 13 pending art execution checks; those pending checks are represented in this unified queue.",
+    "updatedAt": "2026-06-19T16:17:31+0800"
+  },
+  {
+    "id": "UVR-004",
+    "phase": "reference",
+    "description": "Private reference register exists and private raw reference directories are ignored by git.",
+    "status": "passing",
+    "evidence": "docs/westeros-interactive-map/PRIVATE_REFERENCE_REGISTER.md exists. git check-ignore verifies apps/westeros-map/private/westeros-reference/example.jpg and apps/westeros-map/private/generated-working/example.png are ignored by apps/westeros-map/.gitignore.",
+    "updatedAt": "2026-06-19T16:17:31+0800"
+  },
+  {
+    "id": "UVR-005",
+    "phase": "reference",
+    "description": "Collect and register 20-40 private visual references across official stills, map language, architecture, weather, texture, and UI mood.",
+    "status": "passing",
+    "evidence": "Added 24 external visual reference entries PRIV-REF-101 through PRIV-REF-124 to docs/westeros-interactive-map/PRIVATE_REFERENCE_REGISTER.md. References cover official mood/stills pages, lore/sigil sources, antique map language, parchment/medieval manuscript texture, northern architecture, weather textures, and museum UI mood. No raw external images were downloaded or placed in public assets.",
+    "updatedAt": "2026-06-19T19:12:00+0800"
+  },
+  {
+    "id": "UVR-006",
+    "phase": "generation",
+    "description": "Generate an art direction contact sheet with at least 6 candidate directions for the Westeros sand-table map.",
+    "status": "passing",
+    "evidence": "Generated apps/westeros-map/public/assets/westeros/generated/art-direction-contact-sheet-v1.png with six visual directions. Source copy recorded at apps/westeros-map/private/generated-working/art-direction-contact-sheet-v1-source.png and PRIVATE_REFERENCE_REGISTER.md PRIV-REF-001.",
+    "updatedAt": "2026-06-19T17:25:00+0800"
+  },
+  {
+    "id": "UVR-007",
+    "phase": "generation",
+    "description": "Generate or paint one high-fidelity global Westeros map base suitable for the current desktop layout.",
+    "status": "passing",
+    "evidence": "Generated apps/westeros-map/public/assets/westeros/generated/westeros-sandtable-map-v1.png as the high-fidelity 2.5D global map base. Source copy recorded at apps/westeros-map/private/generated-working/westeros-sandtable-map-v1-source.png and PRIVATE_REFERENCE_REGISTER.md PRIV-REF-002.",
+    "updatedAt": "2026-06-19T17:25:00+0800"
+  },
+  {
+    "id": "UVR-008",
+    "phase": "generation",
+    "description": "Generate or paint a Winterfell local map asset that is more dimensional than the current SVG placeholder.",
+    "status": "passing",
+    "evidence": "Generated apps/westeros-map/public/assets/westeros/generated/winterfell-local-map-v1.png and updated asset-winterfell-local-map in apps/westeros-map/src/data/mock/assets.ts. Source copy is stored in ignored apps/westeros-map/private/generated-working/winterfell-local-map-v1-source.png and registered as PRIV-REF-003.",
+    "updatedAt": "2026-06-19T17:40:00+0800"
+  },
+  {
+    "id": "UVR-009",
+    "phase": "generation",
+    "description": "Generate or paint seven Winterfell event artworks for the required MVP events.",
+    "status": "passing",
+    "evidence": "Generated one seven-panel Winterfell event contact sheet at /Users/van/.codex/generated_images/019ea520-d86d-7680-82be-19e577c136bd/ig_072deaf351b74f09016a355180dadc8191959e384b1bd58a4c.png, copied source to apps/westeros-map/private/generated-working/winterfell-event-contact-sheet-v1-source.png, and cropped seven 1280x720 frontend assets under apps/westeros-map/public/assets/westeros/generated/events/.",
+    "updatedAt": "2026-06-19T18:43:00+0800"
+  },
+  {
+    "id": "UVR-010",
+    "phase": "generation",
+    "description": "Generate weather and atmosphere textures for clouds, northern snow, and war smoke.",
+    "status": "passing",
+    "evidence": "Generated three transparent procedural PNG weather textures under apps/westeros-map/public/assets/westeros/generated/weather/: cloud-haze-texture-v1.png, northern-snow-texture-v1.png, and war-smoke-texture-v1.png. Integrated them into WeatherLayer.tsx with data-weather-texture markers. E2E confirms cloud, snow, and smoke texture layers are present and weather controls still work. Screenshot: apps/westeros-map/test-results/visual-v1-unified-release/1440x900-weather-textures-v1.png.",
+    "updatedAt": "2026-06-19T19:02:00+0800"
+  },
+  {
+    "id": "UVR-011",
+    "phase": "frontend",
+    "description": "Replace the current global SVG placeholder with the selected high-fidelity generated/painterly map asset while preserving nodes and interactions.",
+    "status": "passing",
+    "evidence": "Updated apps/westeros-map/src/components/map/WorldMap.tsx to use /assets/westeros/generated/westeros-sandtable-map-v1.png and updated mock asset metadata in apps/westeros-map/src/data/mock/assets.ts.",
+    "updatedAt": "2026-06-19T17:25:00+0800"
+  },
+  {
+    "id": "UVR-012",
+    "phase": "frontend",
+    "description": "Replace Winterfell event cards and local map with generated assets and preserve source/canon labels.",
+    "status": "passing",
+    "evidence": "Updated apps/westeros-map/src/data/mock/assets.ts so all seven Winterfell event cards use /assets/westeros/generated/events/*.png. Local map had already been replaced by /assets/westeros/generated/winterfell-local-map-v1.png. E2E confirms seven event cards and show-canon labels remain visible. Screenshot: apps/westeros-map/test-results/visual-v1-unified-release/1440x900-winterfell-event-art-v1.png.",
+    "updatedAt": "2026-06-19T18:43:00+0800"
+  },
+  {
+    "id": "UVR-013",
+    "phase": "cms",
+    "description": "CMS/manifest metadata distinguishes private-prototype, public-ready-candidate, and blocked asset scopes.",
+    "status": "passing",
+    "evidence": "Updated apps/westeros-map/src/collections/Media.ts so usageScope is a required select with private-prototype, public-ready-candidate, and blocked options. Regenerated Payload types via npm run payload:generate-types and confirmed import map via npm run payload:generate-importmap. ASSET_MANIFEST.md and PRIVATE_REFERENCE_REGISTER.md now use private-prototype consistently for generated/repainted frontend assets.",
+    "updatedAt": "2026-06-19T18:52:00+0800"
+  },
+  {
+    "id": "UVR-014",
+    "phase": "assets",
+    "description": "All generated/repainted assets entering the frontend are listed in ASSET_MANIFEST.md with source chain and risk notes.",
+    "status": "passing",
+    "evidence": "ASSET_MANIFEST.md records generated map assets, the V1 redrawn house sigil/button assets for Stark, Baratheon, Lannister, Greyjoy, and Bolton, plus seven generated Winterfell event artworks with source chain, private-prototype scope, and risk notes.",
+    "updatedAt": "2026-06-19T18:43:00+0800"
+  },
+  {
+    "id": "UVR-015",
+    "phase": "verify",
+    "description": "New 1440x900 and 1920x1080 screenshots show clear visual improvement over V1 placeholder screenshots.",
+    "status": "passing",
+    "evidence": "New generated-map screenshots captured at apps/westeros-map/test-results/visual-v1-unified-release/1440x900-home-generated-map.png, 1440x900-winterfell-generated-map.png, 1920x1080-home-generated-map.png, and 1920x1080-winterfell-generated-map.png. Compared against prior V1 placeholder screenshots in apps/westeros-map/test-results/visual-v1-production/; new map clearly replaces flat SVG placeholder with 2.5D high-fidelity fantasy terrain.",
+    "updatedAt": "2026-06-19T17:32:00+0800"
+  },
+  {
+    "id": "UVR-016",
+    "phase": "verify",
+    "description": "lint, typecheck, unit tests, E2E tests, and production build pass after art asset replacement.",
+    "status": "passing",
+    "evidence": "After generated global map and Winterfell local map replacement, npm run typecheck, npm run lint, npm run test:unit (9/9), npm run test:e2e (11/11), and npm run build all passed in apps/westeros-map. Unit test selectors.test.ts was updated to expect /assets/westeros/generated/winterfell-local-map-v1.png.",
+    "updatedAt": "2026-06-19T17:46:30+0800"
+  },
+  {
+    "id": "UVR-017",
+    "phase": "release",
+    "description": "Public-ready cleanup report exists, listing which private-prototype assets must be replaced before any public launch.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/PUBLIC_READY_CLEANUP_REPORT.md. It lists current private-prototype generated assets, private source files that must not enter public builds, blocked asset categories, CMS/manifest cleanup state, and required actions before public launch.",
+    "updatedAt": "2026-06-19T18:52:00+0800"
+  },
+  {
+    "id": "UVR-018",
+    "phase": "frontend",
+    "description": "House-specific sigil and flag button art replaces generic placeholders for Stark, Baratheon, Lannister, Greyjoy, and Bolton while preserving one coherent UI style.",
+    "status": "passing",
+    "evidence": "Added five original redrawn SVG sigil/button assets under apps/westeros-map/public/assets/westeros/houses/. Updated mock asset metadata, HouseBadge, BottomLegendBar, unit expectations, and added an E2E regression test. Screenshot evidence: apps/westeros-map/test-results/visual-v1-unified-release/1440x900-house-sigil-buttons-v1.png and 1440x900-house-badges-v1.png. Verification passed: typecheck, lint, unit tests (9/9), E2E tests (12/12), production build.",
+    "updatedAt": "2026-06-19T18:24:00+0800"
+  }
+]

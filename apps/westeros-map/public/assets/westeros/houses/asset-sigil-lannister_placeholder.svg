@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Original abstract lion sigil placeholder</title>
+  <desc id="desc">An original simplified lion mark, not copied from official heraldry.</desc>
+  <rect width="512" height="512" rx="36" fill="#b9342d"/>
+  <circle cx="256" cy="246" r="118" fill="#d8b45f" stroke="#31150f" stroke-width="14"/>
+  <path d="M256 82 292 151 365 132 341 205 407 245 337 280 350 356 287 314 256 384 225 314 162 356 175 280 105 245 171 205 147 132 220 151Z" fill="#e5c876" stroke="#36170f" stroke-width="10"/>
+  <path d="M207 235 h35 M270 235 h35 M226 291 c23 23 38 23 61 0" fill="none" stroke="#36170f" stroke-width="14" stroke-linecap="round"/>
+</svg>

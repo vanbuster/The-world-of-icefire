@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Robert arrives at Winterfell placeholder art</title>
+  <desc id="desc">Original parchment illustration of a royal road entering Winterfell.</desc>
+  <rect width="800" height="600" fill="#c9a46b"/>
+  <path d="M0 450 C160 390 288 416 412 470 C528 521 657 522 800 455 V600 H0Z" fill="#6f5a3b" opacity=".55"/>
+  <path d="M333 192 464 164 548 250 520 378 346 395 258 298Z" fill="#4f3a28" stroke="#25180f" stroke-width="8"/>
+  <path d="M378 232 450 221 487 259 475 326 393 338 351 295Z" fill="#b99359"/>
+  <path d="M115 515 C230 392 359 358 507 302" fill="none" stroke="#332013" stroke-width="34" stroke-linecap="round" opacity=".4"/>
+  <g stroke="#5d1f1b" stroke-width="7" stroke-linecap="round">
+    <path d="M180 386 v-93"/>
+    <path d="M201 299 c-26-18-43-18-62-2v58c20-14 39-13 62 2z" fill="#8e2f25"/>
+  </g>
+  <g fill="#20140d">
+    <circle cx="222" cy="380" r="14"/>
+    <circle cx="285" cy="358" r="14"/>
+    <circle cx="348" cy="335" r="14"/>
+  </g>
+  <text x="54" y="76" fill="#2b1b11" font-family="Georgia, serif" font-size="31">THE KING'S ROAD NORTH</text>
+</svg>

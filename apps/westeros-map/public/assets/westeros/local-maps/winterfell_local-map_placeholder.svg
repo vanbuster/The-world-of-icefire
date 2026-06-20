@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540" role="img" aria-labelledby="title desc">
+  <title id="title">Original Winterfell local map placeholder</title>
+  <desc id="desc">A parchment miniature map showing Winterfell, Wolfswood, White Knife, and Winter Town in an original style.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dec38f"/>
+      <stop offset=".64" stop-color="#b98450"/>
+      <stop offset="1" stop-color="#5c3b24"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence baseFrequency=".035" numOctaves="3" seed="31"/>
+      <feColorMatrix type="saturate" values=".18"/>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+  </defs>
+  <rect width="900" height="540" fill="url(#paper)"/>
+  <g filter="url(#noise)">
+    <path d="M78 120 C158 79 256 78 331 126 C277 161 221 197 185 251 C147 306 105 333 54 319 C37 251 43 180 78 120Z" fill="#2f4a2d" opacity=".46"/>
+    <path d="M635 46 C690 136 689 239 637 335 C601 400 594 459 634 512" fill="none" stroke="#244d5a" stroke-opacity=".56" stroke-width="24" stroke-linecap="round"/>
+    <path d="M636 50 C690 142 684 246 629 340 C592 402 596 460 633 510" fill="none" stroke="#c7e1dd" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+    <path d="M342 166 514 131 592 223 548 354 355 384 265 278Z" fill="#8e6542" stroke="#2b1b11" stroke-width="5"/>
+    <path d="M372 194 503 171 552 232 520 320 381 338 313 274Z" fill="#c0a06d" stroke="#2b1b11" stroke-width="3"/>
+    <path d="M402 218 480 204 512 238 495 294 410 307 370 272Z" fill="#4d3b2b" opacity=".7"/>
+    <circle cx="334" cy="171" r="20" fill="#5d4632" stroke="#1f140c" stroke-width="4"/>
+    <circle cx="548" cy="351" r="18" fill="#5d4632" stroke="#1f140c" stroke-width="4"/>
+    <path d="M386 398 C433 381 490 385 535 409 C495 443 431 447 384 421Z" fill="#6e5438" opacity=".56"/>
+    <path d="M280 310 C330 338 392 365 447 426" fill="none" stroke="#3b2516" stroke-width="3" stroke-dasharray="10 10" opacity=".64"/>
+    <path d="M529 148 C573 126 612 95 637 51" fill="none" stroke="#3b2516" stroke-width="3" stroke-dasharray="9 10" opacity=".56"/>
+  </g>
+  <g font-family="Georgia, serif" fill="#24160d">
+    <text x="366" y="260" font-size="28" font-weight="700">WINTERFELL</text>
+    <text x="98" y="177" font-size="25">WOLFSWOOD</text>
+    <text x="620" y="272" font-size="23" transform="rotate(67 620 272)">WHITE KNIFE</text>
+    <text x="393" y="432" font-size="22">WINTER TOWN</text>
+  </g>
+  <rect x="24" y="24" width="852" height="492" fill="none" stroke="#3b2413" stroke-opacity=".42" stroke-width="6"/>
+  <rect x="42" y="42" width="816" height="456" fill="none" stroke="#e2c98c" stroke-opacity=".36" stroke-width="2"/>
+</svg>

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "SAND-001",
+    "phase": "loop",
+    "description": "V1.6 sandtable realism loop exists and is marked active.",
+    "status": "passing",
+    "evidence": "Created V1_6_SANDTABLE_REALISM_LOOP_PROMPT.md and loop-v1-6-sandtable-realism status directory.",
+    "updatedAt": "2026-06-20T00:00:00+0800"
+  },
+  {
+    "id": "SAND-002",
+    "phase": "research",
+    "description": "Network research references are collected for sandtable maps, realistic heraldry, miniature UI buttons, and museum atlas interaction mood.",
+    "status": "passing",
+    "evidence": "SOURCE_REGISTER.md includes SRC-017 through SRC-030 for Westeros geography and key locations; PRIVATE_REFERENCE_REGISTER.md includes V1.6 visual references PRIV-REF-201 through PRIV-REF-212.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-003",
+    "phase": "subagent",
+    "description": "A sub-agent visual audit is completed and recorded in SUBAGENT_AUDIT.md.",
+    "status": "passing",
+    "evidence": "Visual audit sub-agent Carver completed a read-only audit. Findings were recorded in docs/westeros-interactive-map/loop-v1-6-sandtable-realism/SUBAGENT_AUDIT.md, covering MapBackground, MapNode, WorldMap, HouseBadge, BottomLegendBar, AppShell, screenshot standards, and priority asset replacements.",
+    "updatedAt": "2026-06-20T00:18:00+0800"
+  },
+  {
+    "id": "SAND-004",
+    "phase": "generation",
+    "description": "A higher-detail V3 lore-constrained Westeros sandtable map asset replaces the previous noisy/blurry and geographically loose map background.",
+    "status": "passing",
+    "evidence": "Generated V3 lore-constrained map at apps/westeros-map/public/assets/westeros/generated/v16/westeros-sandtable-map-v3-canon.png from source apps/westeros-map/private/generated-working/v16/westeros-sandtable-map-v3-canon-source.png; browser natural size verified as 3074x2046.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-005",
+    "phase": "generation",
+    "description": "At least five major house sigils are upgraded to more realistic material assets.",
+    "status": "passing",
+    "evidence": "Five material sigils are present and used: house-stark-material-v2.png, house-baratheon-material-v2.png, house-lannister-material-v2.png, house-greyjoy-material-v2.png, and house-bolton-material-v2.png; E2E sigil test passed.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-006",
+    "phase": "generation",
+    "description": "Location node buttons are upgraded from generic line icons to miniature sandtable button assets.",
+    "status": "passing",
+    "evidence": "MapNode.tsx uses generated node art assets via data-map-node-art; E2E verifies 12 node art instances and no generic lucide line-icon primary node buttons.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-007",
+    "phase": "frontend",
+    "description": "Map background, house badges, bottom house buttons, and map nodes use V1.6 realism assets in the frontend.",
+    "status": "passing",
+    "evidence": "WorldMap.tsx now loads westeros-sandtable-map-v3-canon.png; assets.ts points asset-westeros-map to V3; BottomLegendBar and HouseBadge use material sigils; MapNode uses miniature button art.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-008",
+    "phase": "interaction",
+    "description": "Drag/zoom/hover/selected behavior is enhanced to feel more like a physical sandtable operation surface.",
+    "status": "passing",
+    "evidence": "MapViewport exposes data-map-dragging and data-sandtable-zoom-tier; globals.css adds sandtable perspective/glass/filter states; E2E drag/zoom/reset test passed.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-009",
+    "phase": "assets",
+    "description": "All V1.6 generated/repainted assets are recorded in ASSET_MANIFEST.md and PRIVATE_REFERENCE_REGISTER.md.",
+    "status": "passing",
+    "evidence": "ASSET_MANIFEST.md records V3 map, historical V2 map, house sigils, node buttons, and weather assets; PRIVATE_REFERENCE_REGISTER.md records V3 source as PRIV-REF-008 plus V2 house/node sources.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-010",
+    "phase": "verify",
+    "description": "Visual screenshots at 1440x900 and 1920x1080 prove improved sandtable detail and UI material quality.",
+    "status": "passing",
+    "evidence": "Captured 1440x900-home-sandtable-v16-v3-canon.png, 1440x900-map-zoom-v3-canon.png, 1440x900-winterfell-detail-v3-canon.png, 1920x1080-home-sandtable-v16-v3-canon.png, and 1920x1080-map-zoom-max-v3-canon.png.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-011",
+    "phase": "verify",
+    "description": "typecheck, lint, unit tests, E2E tests, and production build pass after V1.6 upgrades.",
+    "status": "passing",
+    "evidence": "npm run typecheck, npm run lint, npm run test:unit (9 tests), npm run test:e2e (12 tests), and npm run build all passed after V3 geography-constrained upgrade.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-012",
+    "phase": "release",
+    "description": "V1.6 final summary records remaining visual risks and next recommended loop.",
+    "status": "passing",
+    "evidence": "Progress and operator status record V1.6 V3 result, remaining risk that generated landmarks still require human lore review, and next recommendation to split terrain into layers / tiles if higher zoom fidelity is required.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  },
+  {
+    "id": "SAND-013",
+    "phase": "lore",
+    "description": "A reviewable Westeros geography sidecar knowledge base exists and defines generation constraints for key locations.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/WESTEROS_GEOGRAPHY_KNOWLEDGE_BASE.md with region constraints, location anchor table, V1.6 generation prompt, and manual geography QA checklist.",
+    "updatedAt": "2026-06-20T01:05:00+0800"
+  },
+  {
+    "id": "SAND-014",
+    "phase": "generation",
+    "description": "The map background is replaced by a V3 lore-constrained sandtable asset that removes random city clutter and respects the geography knowledge base.",
+    "status": "passing",
+    "evidence": "Frontend loads V3 lore-constrained map; screenshots show Eyrie in eastern mountains, King's Landing at east coast river mouth/bay, Highgarden in southwest fertile Reach, Pyke offshore west, and Sunspear in southeastern Dorne.",
+    "updatedAt": "2026-06-20T12:15:00+0800"
+  }
+]

@@ -1,5 +1,45 @@
+.DS_Store
+.superpowers/
+
+# dependencies
+node_modules/
+**/node_modules/
+
+# build outputs
+.next/
+**/.next/
+out/
+build/
+coverage/
+
+# local environment and secrets
 .env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# local databases
+payload-dev.db*
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db-shm
+*.db-wal
+
+# helper/script local output
 output/
 *.pyc
 __pycache__/
 .wechat_token.json
+
+# generated local-only artifacts
+*.tsbuildinfo
+next-env.d.ts
+apps/westeros-map/private/
+apps/westeros-map/test-results/
+
+# hosting
+.vercel/
+**/.vercel/

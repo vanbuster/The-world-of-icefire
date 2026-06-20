@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Original abstract antler sigil placeholder</title>
+  <desc id="desc">An original simplified antler mark, not copied from official heraldry.</desc>
+  <rect width="512" height="512" rx="36" fill="#d5b158"/>
+  <path d="M256 438 V162" stroke="#22180f" stroke-width="22" stroke-linecap="round"/>
+  <path d="M257 187 C215 142 168 118 110 108 M256 207 C205 205 160 224 119 266 M255 231 C211 257 187 300 173 361" fill="none" stroke="#22180f" stroke-width="20" stroke-linecap="round"/>
+  <path d="M255 187 C298 142 344 118 402 108 M256 207 C307 205 352 224 393 266 M257 231 C301 257 325 300 339 361" fill="none" stroke="#22180f" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="256" cy="432" r="28" fill="#22180f"/>
+</svg>

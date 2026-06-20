@@ -1,0 +1,138 @@
+[
+  {
+    "id": "V15-LOOP-001",
+    "phase": "loop",
+    "description": "V1.5 private art remix loop folder, prompt, status, progress, blockers, and acceptance checklist exist.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/V1_5_ART_REMIX_LOOP_PROMPT.md and docs/westeros-interactive-map/loop-v1-5-art-remix/ with ACCEPTANCE_CHECKS.json, OPERATOR_STATUS.md, PROGRESS.md, and BLOCKERS.md.",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-LOOP-002",
+    "phase": "loop",
+    "description": "Project constraints and docs index mention the V1.5 private art remix loop as the active art upgrade path.",
+    "status": "passing",
+    "evidence": "Updated WESTEROS_INTERACTIVE_MAP_CONSTRAINTS.md and docs/westeros-interactive-map/README.md with V1.5 private art remix loop references and boundaries.",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-REF-001",
+    "phase": "reference",
+    "description": "Private reference register exists and defines how official stills and network images are tracked.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/PRIVATE_REFERENCE_REGISTER.md with fields for local path/link, reference type, source party, use, derived asset, official-material flag, frontend use, scope, and risk notes.",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-REF-002",
+    "phase": "reference",
+    "description": "Private raw reference directory is ignored by git and separated from public frontend assets.",
+    "status": "passing",
+    "evidence": "apps/westeros-map/.gitignore includes private/westeros-reference/ and private/generated-working/ so raw official stills and intermediate generations stay out of tracked public assets.",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-REF-003",
+    "phase": "reference",
+    "description": "Collect 20-40 private visual references across official stills, map language, architecture, weather, texture, and UI mood.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-GEN-001",
+    "phase": "generation",
+    "description": "Generate an art direction contact sheet with at least 6 candidate directions for the Westeros sand-table map.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-GEN-002",
+    "phase": "generation",
+    "description": "Generate or paint one high-fidelity global Westeros map base suitable for the current desktop layout.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-GEN-003",
+    "phase": "generation",
+    "description": "Generate or paint a Winterfell local map asset that is more dimensional than the current SVG placeholder.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-GEN-004",
+    "phase": "generation",
+    "description": "Generate or paint seven Winterfell event artworks for the required MVP events.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-GEN-005",
+    "phase": "generation",
+    "description": "Generate weather and atmosphere textures for clouds, northern snow, and war smoke.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-FE-001",
+    "phase": "frontend",
+    "description": "Replace the current global SVG placeholder with the selected high-fidelity generated/painterly map asset while preserving nodes and interactions.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-FE-002",
+    "phase": "frontend",
+    "description": "Replace Winterfell event cards and local map with generated assets and preserve source/canon labels.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-CMS-001",
+    "phase": "cms",
+    "description": "CMS/manifest metadata distinguishes private-prototype, public-ready-candidate, and blocked asset scopes.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-ASSET-001",
+    "phase": "assets",
+    "description": "All generated/repainted assets entering the frontend are listed in ASSET_MANIFEST.md with source chain and risk notes.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-VERIFY-001",
+    "phase": "verify",
+    "description": "New 1440x900 and 1920x1080 screenshots show clear visual improvement over V1 placeholder screenshots.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-VERIFY-002",
+    "phase": "verify",
+    "description": "lint, typecheck, unit tests, E2E tests, and production build pass after art asset replacement.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  },
+  {
+    "id": "V15-RELEASE-001",
+    "phase": "release",
+    "description": "Public-ready cleanup report exists, listing which private-prototype assets must be replaced before any public launch.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-19T15:35:18+0800"
+  }
+]

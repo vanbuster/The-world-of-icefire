@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Bran falls from the tower placeholder art</title>
+  <desc id="desc">Original symbolic illustration of a high tower and a falling shadow.</desc>
+  <rect width="800" height="600" fill="#c3a06c"/>
+  <path d="M458 114 h110 v374 H420 V176Z" fill="#4b3625" stroke="#22150d" stroke-width="8"/>
+  <path d="M484 143 h56 v64 h-56zM474 254 h68 v54h-68zM468 370 h76v59h-76z" fill="#d9c08c" opacity=".7"/>
+  <path d="M313 88 C259 163 245 247 292 323 C338 399 333 476 278 545" fill="none" stroke="#1b1110" stroke-width="18" stroke-linecap="round" opacity=".43"/>
+  <circle cx="292" cy="288" r="23" fill="#1b1110" opacity=".67"/>
+  <path d="M278 311 l-56 58 M309 307 l58 54 M290 318 l-22 99 M304 319 l30 93" stroke="#1b1110" stroke-width="12" stroke-linecap="round" opacity=".67"/>
+  <path d="M402 489 C515 452 633 457 748 509 V600 H0 V539 C132 518 256 526 402 489Z" fill="#523722" opacity=".52"/>
+  <text x="52" y="80" fill="#2b1b11" font-family="Georgia, serif" font-size="31">THE BROKEN TOWER</text>
+</svg>

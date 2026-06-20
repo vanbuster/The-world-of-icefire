@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Battle of the Bastards placeholder art</title>
+  <desc id="desc">Original symbolic battlefield illustration for a show-canon event.</desc>
+  <rect width="800" height="600" fill="#b99966"/>
+  <path d="M0 390 C151 346 299 351 433 386 C570 421 683 425 800 389 V600 H0Z" fill="#59422e" opacity=".64"/>
+  <g stroke="#21150c" stroke-width="8" stroke-linecap="round">
+    <path d="M155 445 L299 251 M298 445 L154 251"/>
+    <path d="M496 452 L642 238 M646 452 L498 238"/>
+  </g>
+  <g fill="#1c120b" opacity=".64">
+    <circle cx="208" cy="413" r="21"/>
+    <circle cx="262" cy="408" r="18"/>
+    <circle cx="548" cy="410" r="21"/>
+    <circle cx="604" cy="406" r="18"/>
+  </g>
+  <path d="M318 346 C392 297 473 298 550 346" fill="none" stroke="#d9d0c4" stroke-width="17" stroke-linecap="round" opacity=".38"/>
+  <g fill="#1a120c" opacity=".25">
+    <circle cx="309" cy="253" r="88"/>
+    <circle cx="418" cy="222" r="116"/>
+    <circle cx="534" cy="263" r="94"/>
+  </g>
+  <text x="56" y="78" fill="#2b1b11" font-family="Georgia, serif" font-size="31">BATTLE IN THE SNOWFIELD</text>
+</svg>

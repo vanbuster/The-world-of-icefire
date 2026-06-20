@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Original abstract wolf sigil placeholder</title>
+  <desc id="desc">An original simplified wolf mark, not copied from official heraldry.</desc>
+  <rect width="512" height="512" rx="36" fill="#d6c49b"/>
+  <path d="M256 70 354 134 402 248 356 394 256 452 156 394 110 248 158 134Z" fill="#283a35" stroke="#1b211e" stroke-width="12"/>
+  <path d="M157 139 225 203 256 151 287 203 355 139 325 287 256 351 187 287Z" fill="#cfd6c6"/>
+  <path d="M210 251 h35 M267 251 h35" stroke="#1d251f" stroke-width="15" stroke-linecap="round"/>
+  <path d="M229 316 256 342 283 316" fill="none" stroke="#1d251f" stroke-width="14" stroke-linecap="round"/>
+</svg>

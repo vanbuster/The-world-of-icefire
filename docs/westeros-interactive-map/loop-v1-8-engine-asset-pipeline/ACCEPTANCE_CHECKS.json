@@ -1,0 +1,98 @@
+[
+  {
+    "id": "ENG-001",
+    "phase": "loop",
+    "description": "V1.8 engine asset pipeline loop exists and is marked as the active loop.",
+    "status": "passing",
+    "evidence": "Created V1_8_ENGINE_ASSET_PIPELINE_LOOP_PROMPT.md and loop-v1-8-engine-asset-pipeline status directory; ACTIVE_LOOP.md points to V1.8.",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-002",
+    "phase": "requirements",
+    "description": "V1.8 requirements, delivery goals, non-goals, and route decision are documented.",
+    "status": "passing",
+    "evidence": "V1_8_ENGINE_ASSET_PIPELINE_LOOP_PROMPT.md documents C方案为主, standard validation, deliverables, non-goals, and success criteria.",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-003",
+    "phase": "knowledge",
+    "description": "The sidecar geography knowledge base records the V1.8 engine asset pipeline decision and current status.",
+    "status": "passing",
+    "evidence": "WESTEROS_GEOGRAPHY_KNOWLEDGE_BASE.md version V1.2 records V1.8 as the active loop, adds C方案 as the architecture principle, and includes section 13 for engine asset pipeline validation.",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-004",
+    "phase": "constraints",
+    "description": "The project constraint file records the V1.8 architecture direction change.",
+    "status": "passing",
+    "evidence": "WESTEROS_INTERACTIVE_MAP_CONSTRAINTS.md includes the 2026-06-21 V1.8 requirement change, C方案 preference, standard validation scope, sample region, and downgrade rule.",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-005",
+    "phase": "spec",
+    "description": "A V1.8 design spec is written for engine-authored assets with web runtime and CMS management.",
+    "status": "passing",
+    "evidence": "Created docs/superpowers/specs/2026-06-21-westeros-v18-engine-asset-pipeline-design.md.",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-006",
+    "phase": "plan",
+    "description": "A V1.8 implementation plan is written and ready for execution.",
+    "status": "passing",
+    "evidence": "Created docs/superpowers/plans/2026-06-21-westeros-v18-engine-asset-pipeline.md with tasks for types, mock manifest, Engine Asset Lab route, E2E, docs, screenshots, and verification.",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-007",
+    "phase": "frontend",
+    "description": "A V1.8 Engine Asset Lab or equivalent experimental frontend route exists.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-008",
+    "phase": "asset-pipeline",
+    "description": "A modular North / Winterfell sandtable sample asset or simulated asset pipeline is produced.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-009",
+    "phase": "cms",
+    "description": "CMS-facing asset metadata requirements are specified for terrain tiles, prefabs, materials, source files, and map anchors.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-010",
+    "phase": "visual",
+    "description": "Visual screenshots prove the V1.8 asset lab direction is visible and does not break V1.7.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-011",
+    "phase": "verify",
+    "description": "typecheck, lint, unit tests, E2E tests, and production build pass after V1.8 changes.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  },
+  {
+    "id": "ENG-012",
+    "phase": "decision",
+    "description": "V1.8 concludes with a recommendation: continue engine-authored web runtime, switch to Unity WebGL, or stay with high-fidelity 2.5D web.",
+    "status": "pending",
+    "evidence": "",
+    "updatedAt": "2026-06-21T00:00:00+0800"
+  }
+]

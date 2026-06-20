@@ -1,0 +1,234 @@
+[
+  {
+    "id": "V1-LOOP-001",
+    "phase": "loop",
+    "description": "V1 high-fidelity release loop folder, status file, progress log, and acceptance checklist exist.",
+    "status": "passing",
+    "evidence": "Created docs/westeros-interactive-map/loop-v1-release with ACCEPTANCE_CHECKS.json, OPERATOR_STATUS.md, PROGRESS.md, and BLOCKERS.md. Created top-level V1 loop prompt at docs/westeros-interactive-map/V1_RELEASE_LOOP_PROMPT.md.",
+    "updatedAt": "2026-06-18T15:23:36+0800"
+  },
+  {
+    "id": "V1-LOOP-002",
+    "phase": "loop",
+    "description": "Project constraints and docs index mention the V1 loop as the active continuation after MVP.",
+    "status": "passing",
+    "evidence": "Updated WESTEROS_INTERACTIVE_MAP_CONSTRAINTS.md with 2026-06-18 V1 high-fidelity release loop change record. Updated docs/westeros-interactive-map/README.md to link V1_RELEASE_LOOP_PROMPT.md and active loop-v1-release status directory.",
+    "updatedAt": "2026-06-18T15:23:36+0800"
+  },
+  {
+    "id": "V1-VIS-001",
+    "phase": "visual",
+    "description": "Global map visual reads as a richer 2.5D fantasy sand-table, not only a flat placeholder.",
+    "status": "passing",
+    "evidence": "Enhanced apps/westeros-map/public/assets/westeros/maps/westeros_global-map_placeholder.svg with V1 relief ridges, roads, forests, sea/coast shapes, and miniature castle symbols. Verified in production screenshots under apps/westeros-map/test-results/visual-v1-production/1440x900-home.png and 1920x1080-castle-black.png.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-VIS-002",
+    "phase": "visual",
+    "description": "Map has visible terrain language for Wall, North, Riverlands, Vale, Reach, Dorne, mountains, rivers, forests, sea, and roads.",
+    "status": "passing",
+    "evidence": "Global SVG includes labels for THE WALL, THE NORTH, RIVERLANDS, THE VALE, THE REACH, DORNE, SUMMER SEA plus mountain symbols, river strokes, forest pine symbols, sea/coast shapes, and dashed road paths. Production screenshots captured these layers.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-VIS-003",
+    "phase": "visual",
+    "description": "Weather layer has user-facing strength controls or modes for high/low/off.",
+    "status": "passing",
+    "evidence": "Added weatherIntensity to mapStore, high/low/off controls in MapViewport with data-weather-control hooks, and mode-aware WeatherLayer rendering. E2E test 'supports weather intensity controls' passed, verifying high/low/off and snow/smoke behavior.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-VIS-004",
+    "phase": "visual",
+    "description": "Winterfell detail panel visual hierarchy is polished for a publishable desktop showcase.",
+    "status": "passing",
+    "evidence": "LocationPanel now marks detail level, renders local map, factual cards, houses, timeline, characters, gallery, and story entry with consistent hierarchy. Production screenshot apps/westeros-map/test-results/visual-v1-production/1440x900-winterfell.png verifies the desktop panel state.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-VIS-005",
+    "phase": "visual",
+    "description": "No visible text or controls overlap incoherently at 1440x900 and 1920x1080 desktop viewports.",
+    "status": "passing",
+    "evidence": "Moved Castle Black node to avoid map control overlap and made the viewport label pointer-events-none. Captured 1440x900 and 1920x1080 production screenshots; DOM metrics showed 12 nodes, 0 browser errors, no Next dev portal, and screenshots were visually inspected for incoherent overlap.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-CONTENT-001",
+    "phase": "content",
+    "description": "At least 3 locations have click behavior: Winterfell full detail plus at least 2 preview-level details.",
+    "status": "passing",
+    "evidence": "Added LocationDetailLevel full/preview/node-only. Winterfell is full, King's Landing and Castle Black are preview entries, and node-only locations still show pending affordance. Unit tests and E2E verify full, preview, and pending detail behavior.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-CONTENT-002",
+    "phase": "content",
+    "description": "Castle Black preview detail exists with sourceType/canon labels and relevant people/houses/events placeholders.",
+    "status": "passing",
+    "evidence": "Castle Black mock location now has detailLevel preview, longDescription, geography, politicalStatus, detailSections, Jon Snow relation, and two preview events: event-jon-joins-watch and event-wall-frontier-watch. E2E verifies Castle Black preview detail and heading '琼恩加入守夜人'.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-CONTENT-003",
+    "phase": "content",
+    "description": "King's Landing preview detail exists with sourceType/canon labels and relevant people/houses/events placeholders.",
+    "status": "passing",
+    "evidence": "King's Landing mock location now has detailLevel preview, longDescription, geography, politicalStatus, detailSections, related houses/characters, and preview events event-kings-landing-court and event-kings-landing-coup. E2E verifies King's Landing preview and heading '艾德进入君临政局'.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-CONTENT-004",
+    "phase": "content",
+    "description": "Winterfell timeline event cards show usable generated/drawn art previews rather than text-only placeholders.",
+    "status": "passing",
+    "evidence": "Timeline event cards now render event art backgrounds via data-event-art role=img instead of text-only '配图'. E2E verifies 7 Winterfell event art elements and existing original SVG event assets remain in public/assets/westeros/events.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-CONTENT-005",
+    "phase": "content",
+    "description": "Source labels remain visible for novel/show/show-canon/mixed/original-note content.",
+    "status": "passing",
+    "evidence": "SourceBadge remains in Timeline cards. Existing E2E verifies Battle of the Bastards has data-source-type='show-canon' and data-canon-level='show-canon'. Preview events include mixed and original-note sourceType/canon combinations in mockEvents.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-SEARCH-001",
+    "phase": "search",
+    "description": "Search can open Winterfell full detail and preview-level locations without breaking panel state.",
+    "status": "passing",
+    "evidence": "SearchBox uses map view models detailLevel/isClickable. E2E verifies search opens Winterfell full detail, King's Landing preview detail, and Castle Black preview detail while preserving panel state.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-SEARCH-002",
+    "phase": "search",
+    "description": "Search UI communicates encyclopedia-style scope for future locations, people, events, houses, and storylines.",
+    "status": "passing",
+    "evidence": "Search placeholder changed to '百科检索：地点、人物、事件、家族' and results dropdown includes 'Westeros Index' with future scope copy. E2E verifies placeholder and Westeros Index visibility.",
+    "updatedAt": "2026-06-18T18:49:33+0800"
+  },
+  {
+    "id": "V1-CMS-001",
+    "phase": "cms",
+    "description": "Payload Locations collection supports preview-level detail content and node click mode fields.",
+    "status": "passing",
+    "evidence": "apps/westeros-map/src/collections/Locations.ts exposes detailLevel as required full/preview/node-only select, keeps isMvpClickable as a legacy flag, and surfaces detailLevel in admin columns. Payload admin uses its own (payload)/layout.tsx root layout and SQLite fallback; http://localhost:3000/admin/login and production http://localhost:3001/admin/create-first-user returned 200 in smoke checks.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-CMS-002",
+    "phase": "cms",
+    "description": "Payload Media/Assets fields are documented and aligned with SOURCE_REGISTER and ASSET_MANIFEST.",
+    "status": "passing",
+    "evidence": "apps/westeros-map/src/collections/Media.ts includes title, assetType, sourceType, sourceUrl, author/sourceParty, isAIGenerated, isDerivative, licenseStatus, riskLevel, usageScope, generationPromptSummary, referenceNotes, and status. docs/westeros-interactive-map/ASSET_MANIFEST.md records the V1 global map update and all original public assets.",
+    "updatedAt": "2026-06-18T18:57:31+0800"
+  },
+  {
+    "id": "V1-CMS-003",
+    "phase": "cms",
+    "description": "Seed script includes V1 preview locations and assets without requiring real DB writes during verification.",
+    "status": "passing",
+    "evidence": "apps/westeros-map/src/seed/index.ts writes location.detailLevel, imports mock V1 preview locations/assets, syncs relatedEvents after events are seeded, and now typechecks against generated Payload collection slugs and numeric relation IDs. Verified safe-load with npx tsx src/seed/index.ts, which exits without DB writes unless RUN_PAYLOAD_SEED=true.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-CMS-004",
+    "phase": "cms",
+    "description": "Payload CLI generation scripts pass for import map and TypeScript types.",
+    "status": "passing",
+    "evidence": "npm run payload:generate-importmap passed and npm run payload:generate-types passed on 2026-06-19 after converting payload.config.ts to literal dynamic imports and inlining local source/status field helpers inside collections.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-DATA-001",
+    "phase": "data",
+    "description": "Frontend content data boundary clearly supports mock fallback and future Payload published-data mode.",
+    "status": "passing",
+    "evidence": "apps/westeros-map/src/lib/cms/README.md documents mock-fallback behavior, future NEXT_PUBLIC_CONTENT_SOURCE=payload behavior, published-data-only requirements, detailLevel semantics, frontend no-write behavior, and Payload admin's PostgreSQL-or-SQLite local storage boundary.",
+    "updatedAt": "2026-06-18T19:47:40+0800"
+  },
+  {
+    "id": "V1-DATA-002",
+    "phase": "data",
+    "description": "View models support full detail and preview detail without duplicating panel logic.",
+    "status": "passing",
+    "evidence": "LocationDetailLevel is defined in content types and propagated through MapLocationViewModel and LocationDetailViewModel. selectors.ts centralizes full/preview/node-only click behavior and LocationPanel renders both Winterfell full detail and King's Landing/Castle Black preview detail through one panel path. Unit tests cover the view model behavior.",
+    "updatedAt": "2026-06-18T18:57:31+0800"
+  },
+  {
+    "id": "V1-ASSET-001",
+    "phase": "assets",
+    "description": "V1 asset manifest records all new/updated visual assets and states that no unauthorized official images are used.",
+    "status": "passing",
+    "evidence": "docs/westeros-interactive-map/ASSET_MANIFEST.md records the V1 global map as an original-drawn SVG with low risk and explicitly states it does not use the official map image. The manifest also records original local map, event art, and house sigil assets.",
+    "updatedAt": "2026-06-18T18:57:31+0800"
+  },
+  {
+    "id": "V1-ASSET-002",
+    "phase": "assets",
+    "description": "At least one V1 visual verification screenshot is captured from production build.",
+    "status": "passing",
+    "evidence": "Production build screenshots captured under apps/westeros-map/test-results/visual-v1-production/, including latest 1440x900-home-latest.png, 1440x900-winterfell-latest.png, 1440x900-kings-landing-latest.png, and 1440x900-admin-create-first-user-latest.png.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-TEST-001",
+    "phase": "test",
+    "description": "Unit tests pass after V1 changes.",
+    "status": "passing",
+    "evidence": "npm run test:unit passed in apps/westeros-map on 2026-06-19: 2 test files, 9 tests.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-TEST-002",
+    "phase": "test",
+    "description": "Lint passes after V1 changes.",
+    "status": "passing",
+    "evidence": "npm run lint passed in apps/westeros-map on 2026-06-19.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-TEST-003",
+    "phase": "test",
+    "description": "Typecheck passes after V1 changes.",
+    "status": "passing",
+    "evidence": "npm run typecheck passed in apps/westeros-map on 2026-06-19 after regenerating Payload types and tightening seed relation IDs.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-TEST-004",
+    "phase": "test",
+    "description": "Production build passes after V1 changes.",
+    "status": "passing",
+    "evidence": "npm run build passed cleanly in apps/westeros-map on 2026-06-19. npm run start -- -p 3001 served production frontend and Payload admin create-first-user flow successfully, then the temporary 3001 process was stopped.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-TEST-005",
+    "phase": "test",
+    "description": "Playwright E2E critical path passes after V1 changes.",
+    "status": "passing",
+    "evidence": "npm run test:e2e passed in apps/westeros-map on 2026-06-19: 11/11 Playwright tests, including full/preview/pending location details, weather intensity controls, search, Winterfell timeline event art, and source labels.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-RELEASE-001",
+    "phase": "release",
+    "description": "README documents V1 local acceptance entry, commands, and known red-line items.",
+    "status": "passing",
+    "evidence": "docs/westeros-interactive-map/README.md lists current acceptance entry URLs, V1 loop checklist, and production screenshot directory. apps/westeros-map/README.md lists V1 features, acceptance commands, SQLite/PostgreSQL CMS modes, and boundaries for official assets, database migrations, and deployment. http://localhost:3000 remains running for user acceptance.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  },
+  {
+    "id": "V1-RELEASE-002",
+    "phase": "release",
+    "description": "No real secrets, migrations, production deployment, or destructive operations were performed without explicit authorization.",
+    "status": "passing",
+    "evidence": "No real PostgreSQL migration, real content seed, public deployment, real secret commit, destructive git operation, or global install was performed. Seed verification used safe-load mode without RUN_PAYLOAD_SEED=true. Local SQLite fallback created ignored runtime DB files only for admin route verification. The temporary production server on port 3001 was stopped; dev server on 3000 remains running for local acceptance.",
+    "updatedAt": "2026-06-19T13:23:37+0800"
+  }
+]

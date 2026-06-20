@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Original abstract kraken sigil placeholder</title>
+  <desc id="desc">An original simplified sea-creature mark, not copied from official heraldry.</desc>
+  <rect width="512" height="512" rx="36" fill="#263f48"/>
+  <circle cx="256" cy="188" r="72" fill="#d0ad5e" stroke="#141f24" stroke-width="12"/>
+  <path d="M219 244 C153 282 124 334 132 405 M247 257 C210 320 209 369 247 431 M293 244 C359 282 388 334 380 405 M265 257 C302 320 303 369 265 431" fill="none" stroke="#d0ad5e" stroke-width="28" stroke-linecap="round"/>
+  <path d="M230 177 h18 M264 177 h18" stroke="#142026" stroke-width="11" stroke-linecap="round"/>
+</svg>

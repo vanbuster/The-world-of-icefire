@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">The Starks leave Winterfell placeholder art</title>
+  <desc id="desc">Original parchment illustration of a southbound convoy leaving Winterfell.</desc>
+  <rect width="800" height="600" fill="#d5b77c"/>
+  <path d="M42 438 C197 363 320 391 449 430 C578 468 677 450 790 395" fill="none" stroke="#46301d" stroke-width="32" stroke-linecap="round" opacity=".42"/>
+  <path d="M322 166 461 139 550 234 516 358 334 383 244 284Z" fill="#765234" opacity=".68" stroke="#2d1b10" stroke-width="7"/>
+  <path d="M118 421 h190 l36 34 h-209z" fill="#4b2f1e" stroke="#26170d" stroke-width="5"/>
+  <circle cx="159" cy="464" r="28" fill="#26170d"/>
+  <circle cx="288" cy="464" r="28" fill="#26170d"/>
+  <g stroke="#203621" stroke-width="5" stroke-linecap="round">
+    <path d="M449 415 v-92"/>
+    <path d="M470 327 c-25-16-41-14-62 4v54c21-13 39-12 62 2z" fill="#2f4a2d"/>
+    <path d="M498 402 v-75"/>
+    <path d="M515 331 c-22-14-36-12-54 4v43c18-10 34-10 54 1z" fill="#2f4a2d"/>
+  </g>
+  <text x="56" y="80" fill="#2b1b11" font-family="Georgia, serif" font-size="31">SOUTHBOUND FROM WINTERFELL</text>
+</svg>
