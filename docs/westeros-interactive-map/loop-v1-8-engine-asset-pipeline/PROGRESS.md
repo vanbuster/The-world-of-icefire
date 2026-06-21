@@ -33,3 +33,53 @@
   - `0` failed.
 - Next step:
   - Execute the standard validation plan and build the `/engine-lab` experimental route.
+
+## 2026-06-21T11:17:23+0800
+
+- Initial demo repository push completed before starting V1.8 execution:
+  - Remote: `https://github.com/vanbuster/The-world-of-icefire`
+  - Branch: `main`
+  - Commit: `8444b2f Add initial Westeros interactive map demo`
+- Clean release validation passed:
+  - `npm run typecheck`
+  - `npm run lint`
+  - `npm run test:unit`
+  - `npm run test:e2e`
+  - `npm run build`
+- Created heartbeat automation for quota-refresh continuation, then removed it after the user refreshed quota and requested direct iteration:
+  - id: `resume-westeros-v1-8-after-quota-refresh`
+  - final state: deleted
+- Began V1.8 Subagent-Driven execution:
+  - worker `Peirce`
+  - agent id `019ee623-66c4-76a0-afe5-e250cb0a915e`
+  - task: Task 1 - Define Engine Asset Types
+
+## 2026-06-21T11:27:07+0800
+
+- Removed redundant waiting / resume path and completed the shortest V1.8 validation loop directly.
+- Added V1.8 engine asset type definitions:
+  - `apps/westeros-map/src/types/engineAsset.ts`
+- Added North / Winterfell modular tile manifest:
+  - `apps/westeros-map/src/data/mock/engineAssetLab.ts`
+- Added experimental frontend route:
+  - `apps/westeros-map/src/app/(frontend)/engine-lab/page.tsx`
+  - `apps/westeros-map/src/components/engine-lab/`
+- Added left navigation entry:
+  - `资产实验室`
+- Updated Playwright to use an isolated default test port `3100`, preventing stale server reuse.
+- Added E2E coverage:
+  - `renders the V1.8 engine asset lab validation surface`
+- Captured screenshots:
+  - `apps/westeros-map/test-results/visual-v1-8-engine-asset-pipeline/1440x900-engine-lab.png`
+  - `apps/westeros-map/test-results/visual-v1-8-engine-asset-pipeline/1920x1080-engine-lab.png`
+  - `apps/westeros-map/test-results/visual-v1-8-engine-asset-pipeline/1440x900-engine-lab-weather-off.png`
+- Verification passed:
+  - `npm run typecheck`
+  - `npm run lint`
+  - `npm run test:unit`
+  - `npm run test:e2e` (`13 passed`)
+  - `npm run build`
+- V1.8 conclusion:
+  - Keep the production site as high-fidelity Web 2.5D.
+  - Use engine / 3D tools as asset authoring and validation pipelines.
+  - Do not migrate the full project to Unity / Unreal runtime yet.

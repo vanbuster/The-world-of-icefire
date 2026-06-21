@@ -374,3 +374,28 @@ test.describe("reduced motion", () => {
     expect(["0.001ms", "1e-06s"]).toContain(cloudDuration);
   });
 });
+
+test("renders the V1.8 engine asset lab validation surface", async ({
+  page,
+}) => {
+  await page.goto("/engine-lab");
+
+  await expect(page.locator("[data-engine-lab]")).toBeVisible();
+  await expect(
+    page.getByText("北境 / 临冬城沙盘资产管线验证"),
+  ).toBeVisible();
+  await expect(
+    page.locator("[data-engine-tile='tile-north-winterfell-v1']"),
+  ).toBeVisible();
+  await expect(page.locator("[data-engine-layer='terrain']")).toBeVisible();
+  await expect(page.locator("[data-engine-layer='landmark']")).toBeVisible();
+  await expect(page.locator("[data-engine-layer='forest']")).toBeVisible();
+  await expect(page.locator("[data-engine-layer='route']")).toBeVisible();
+  await expect(page.locator("[data-engine-layer='water']")).toBeVisible();
+  await expect(page.locator("[data-engine-layer='weather']")).toBeVisible();
+  await expect(page.locator("[data-engine-anchor='winterfell']")).toBeVisible();
+  await expect(page.locator("[data-engine-asset-inspector]")).toBeVisible();
+
+  await page.locator("[data-engine-layer-toggle='weather']").click();
+  await expect(page.locator("[data-engine-layer='weather']")).toHaveCount(0);
+});

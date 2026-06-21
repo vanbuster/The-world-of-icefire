@@ -1,4 +1,5 @@
 import {
+  Box,
   Castle,
   GitBranch,
   Landmark,
@@ -7,6 +8,7 @@ import {
   Swords,
   Users,
 } from "lucide-react";
+import Link from "next/link";
 
 const primaryViews = [
   {
@@ -39,6 +41,13 @@ const primaryViews = [
     icon: GitBranch,
     active: false,
   },
+  {
+    label: "资产实验室",
+    description: "V1.8 模块化沙盘资产验证",
+    icon: Box,
+    active: false,
+    href: "/engine-lab",
+  },
 ];
 
 const quickFilters = [
@@ -65,17 +74,14 @@ export function SideNav() {
       <nav className="min-h-0 flex-1 space-y-2 overflow-y-auto p-3">
         {primaryViews.map((item) => {
           const Icon = item.icon;
-          return (
-            <button
-              className={[
-                "group flex w-full items-start gap-3 rounded border px-3 py-3 text-left transition",
-                item.active
-                  ? "border-burnished-gold/55 bg-dark-gold/18 text-panel-foreground shadow-[inset_3px_0_0_var(--burnished-gold)]"
-                  : "border-dark-gold/18 bg-ink/20 text-fog hover:border-dark-gold/45 hover:bg-ink/35 hover:text-panel-foreground",
-              ].join(" ")}
-              key={item.label}
-              type="button"
-            >
+          const className = [
+            "group flex w-full items-start gap-3 rounded border px-3 py-3 text-left transition",
+            item.active
+              ? "border-burnished-gold/55 bg-dark-gold/18 text-panel-foreground shadow-[inset_3px_0_0_var(--burnished-gold)]"
+              : "border-dark-gold/18 bg-ink/20 text-fog hover:border-dark-gold/45 hover:bg-ink/35 hover:text-panel-foreground",
+          ].join(" ");
+          const content = (
+            <>
               <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded border border-dark-gold/30 bg-ink/45 text-burnished-gold">
                 <Icon size={16} strokeWidth={1.8} />
               </span>
@@ -85,6 +91,24 @@ export function SideNav() {
                   {item.description}
                 </span>
               </span>
+            </>
+          );
+
+          if ("href" in item && item.href) {
+            return (
+              <Link className={className} href={item.href} key={item.label}>
+                {content}
+              </Link>
+            );
+          }
+
+          return (
+            <button
+              className={className}
+              key={item.label}
+              type="button"
+            >
+              {content}
             </button>
           );
         })}

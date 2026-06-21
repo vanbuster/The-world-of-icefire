@@ -362,3 +362,37 @@ V1.8 不要求用户掌握复杂建模。最低可行交付可以由以下方式
 ```text
 做一个完成度极高、可发布、可维护的平面 / 2.5D 互动世界观作品。
 ```
+
+### 13.7 V1.8 执行证据
+
+- Engine Asset Lab route: `/engine-lab`
+- Sample tile id: `tile-north-winterfell-v1`
+- Sample anchor: `winterfell`
+- Current runtime: Web-authored validation surface
+- Future export targets: glTF / GLB / PNG tile / sprite atlas / heightmap
+- Verified layer units:
+  - terrain
+  - landmark
+  - forest
+  - route
+  - water
+  - weather
+  - anchor
+- Verification result:
+  - `npm run typecheck`
+  - `npm run lint`
+  - `npm run test:unit`
+  - `npm run test:e2e`
+  - `npm run build`
+
+### 13.8 V1.8 结论
+
+V1.8 证明 C 方案可以作为下一阶段主线：
+
+```text
+高保真 Web 2.5D 继续作为最终用户体验；
+引擎 / 3D 工具作为资产生产、局部沙盘、tile、prefab、material、anchor 的上游管线；
+暂不把完整项目迁移到 Unity / Unreal runtime。
+```
+
+这条路线保留了网页部署、CMS、搜索、详情面板、时间线和长期内容维护的优势，同时允许后续逐步用更强的 3D / 引擎资产替换当前程序化验证层。

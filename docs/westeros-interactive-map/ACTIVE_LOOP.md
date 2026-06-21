@@ -7,7 +7,7 @@
 ## 当前状态
 
 ```text
-in_progress / 6 of 12 passing / ready to execute
+completed / 12 of 12 passing / shortest validation complete
 ```
 
 ## 状态目录

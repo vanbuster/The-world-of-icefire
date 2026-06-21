@@ -51,48 +51,48 @@
     "id": "ENG-007",
     "phase": "frontend",
     "description": "A V1.8 Engine Asset Lab or equivalent experimental frontend route exists.",
-    "status": "pending",
-    "evidence": "",
-    "updatedAt": "2026-06-21T00:00:00+0800"
+    "status": "passing",
+    "evidence": "Implemented /engine-lab via apps/westeros-map/src/app/(frontend)/engine-lab/page.tsx and apps/westeros-map/src/components/engine-lab/*.tsx. E2E confirms [data-engine-lab] and tile-north-winterfell-v1 render.",
+    "updatedAt": "2026-06-21T11:27:07+0800"
   },
   {
     "id": "ENG-008",
     "phase": "asset-pipeline",
     "description": "A modular North / Winterfell sandtable sample asset or simulated asset pipeline is produced.",
-    "status": "pending",
-    "evidence": "",
-    "updatedAt": "2026-06-21T00:00:00+0800"
+    "status": "passing",
+    "evidence": "Created apps/westeros-map/src/data/mock/engineAssetLab.ts with material set, North / Winterfell terrain tile, terrain/landmark/forest/route/water/weather/anchor layers, and winterfell anchor metadata.",
+    "updatedAt": "2026-06-21T11:27:07+0800"
   },
   {
     "id": "ENG-009",
     "phase": "cms",
     "description": "CMS-facing asset metadata requirements are specified for terrain tiles, prefabs, materials, source files, and map anchors.",
-    "status": "pending",
-    "evidence": "",
-    "updatedAt": "2026-06-21T00:00:00+0800"
+    "status": "passing",
+    "evidence": "Created apps/westeros-map/src/types/engineAsset.ts defining source tools, export formats, material sets, layers, terrain tiles, anchors, risk levels, and future source/public asset paths for CMS-facing metadata.",
+    "updatedAt": "2026-06-21T11:27:07+0800"
   },
   {
     "id": "ENG-010",
     "phase": "visual",
     "description": "Visual screenshots prove the V1.8 asset lab direction is visible and does not break V1.7.",
-    "status": "pending",
-    "evidence": "",
-    "updatedAt": "2026-06-21T00:00:00+0800"
+    "status": "passing",
+    "evidence": "Captured screenshots under apps/westeros-map/test-results/visual-v1-8-engine-asset-pipeline/: 1440x900-engine-lab.png, 1920x1080-engine-lab.png, 1440x900-engine-lab-weather-off.png. Existing V1.7 E2E tests remain passing.",
+    "updatedAt": "2026-06-21T11:27:07+0800"
   },
   {
     "id": "ENG-011",
     "phase": "verify",
     "description": "typecheck, lint, unit tests, E2E tests, and production build pass after V1.8 changes.",
-    "status": "pending",
-    "evidence": "",
-    "updatedAt": "2026-06-21T00:00:00+0800"
+    "status": "passing",
+    "evidence": "Verification passed: npm run typecheck, npm run lint, npm run test:unit, npm run test:e2e (13 passed), npm run build. Build includes static /engine-lab route.",
+    "updatedAt": "2026-06-21T11:27:07+0800"
   },
   {
     "id": "ENG-012",
     "phase": "decision",
     "description": "V1.8 concludes with a recommendation: continue engine-authored web runtime, switch to Unity WebGL, or stay with high-fidelity 2.5D web.",
-    "status": "pending",
-    "evidence": "",
-    "updatedAt": "2026-06-21T00:00:00+0800"
+    "status": "passing",
+    "evidence": "Recommendation: continue engine-authored web runtime validation. Keep the production site as high-fidelity Web 2.5D while using engine / 3D tools as an asset authoring pipeline. Do not migrate the whole project to Unity / Unreal runtime yet.",
+    "updatedAt": "2026-06-21T11:27:07+0800"
   }
 ]
